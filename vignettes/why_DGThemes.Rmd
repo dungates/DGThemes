@@ -1,6 +1,6 @@
 ---
 title: "Why DGThemes?"
-author: "Bob Rudis"
+author: "Duncan Gates"
 date: "`r Sys.Date()`"
 output: 
   rmarkdown::html_vignette:

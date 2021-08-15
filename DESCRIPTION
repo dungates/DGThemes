@@ -4,7 +4,7 @@ Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
 Version: 0.8.6
 Date: 2020-07-01
 Authors@R: c(
-      person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
+      person("Duncan", "Gates", email = "Duncanagates@gmail.com", role = c("aut", "cre"), 
              comment = c(ORCID = "0000-0001-5670-2640")),
       person("Patrick", "Kennedy", role=c("ctb")),
       person("Philipp", "Reiner", role = c("ctb")),
@@ -21,7 +21,7 @@ Authors@R: c(
              comment = c(ORCID = "0000-0003-4097-6326")),
       person("Joris", "Meys", email = "Joris.Meys@UGent.be", role = c("ctb"))
     )
-Maintainer: Bob Rudis <bob@rud.is>
+Maintainer: Duncan Gates <Duncanagates@gmail.com>
 Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a 
     spell check function for plot label fields and an overall emphasis on typography. 
     A copy of the 'Google' font 'Roboto Condensed' <https://github.com/google/roboto/> 
