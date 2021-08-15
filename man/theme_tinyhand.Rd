@@ -79,6 +79,6 @@ to register non-core fonts with the Windows graphics device.
 \section{Why Titillium Web?}{
 
 It's free, has tolerable kerning pairs and multiple weights. It's also different
-than Arial Narrow and the fonts most folks use in ggplot2 charts.
+than Tisa Sans Pro and the fonts most folks use in ggplot2 charts.
 }
 

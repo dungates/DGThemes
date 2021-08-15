@@ -40,7 +40,7 @@
 #'        title="Seminal ggplot2 scatterplot example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_gs()
+#'   theme_premium_gs()
 #'
 #' # seminal bar chart
 #'
@@ -54,10 +54,10 @@
 #'        title="Seminal ggplot2 bar chart example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_gs(grid="Y") +
+#'   theme_premium_gs(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
-theme_ipsum_gs <- function(
+theme_premium_gs <- function(
   base_family="Goldman Sans Condensed",
   base_size = 11.5,
   plot_title_family="Goldman Sans Condensed",

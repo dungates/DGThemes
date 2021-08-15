@@ -40,7 +40,7 @@
 #'        title="Seminal ggplot2 scatterplot example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_inter()
+#'   theme_premium_inter()
 #'
 #' # seminal bar chart
 #'
@@ -54,10 +54,10 @@
 #'        title="Seminal ggplot2 bar chart example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_inter(grid="Y") +
+#'   theme_premium_inter(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
-theme_ipsum_inter <- function(
+theme_premium_inter <- function(
   base_family="Inter-Medium",
   base_size = 10,
   plot_title_family="Inter-Bold",

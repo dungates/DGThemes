@@ -11,7 +11,7 @@ test_that("themes are correct", {
     geom_point() +
     facet_wrap(~ a)
 
-  vdiffr::expect_doppelganger("theme_ipsum", plot + theme_ipsum())
-  vdiffr::expect_doppelganger("theme_ipsum_rc", plot + theme_ipsum_rc())
+  vdiffr::expect_doppelganger("theme_premium", plot + theme_premium())
+  vdiffr::expect_doppelganger("theme_premium_rc", plot + theme_premium_rc())
 
 })

@@ -21,7 +21,7 @@ white = "#ffffff"
 #' @export
 ft_text_col <- "#929299"
 
-#' @rdname theme_ipsum_rc
+#' @rdname theme_premium_rc
 #' @export
 theme_ft_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
           plot_title_family = base_family,

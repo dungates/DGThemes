@@ -29,9 +29,9 @@
   #
   # fnt <- extrafont::fonttable()
   # if (!any(grepl("Arial[ ]Narrow|Roboto[ ]Condensed", fnt$FamilyName))) {
-  #   packageStartupMessage("NOTE: Either Arial Narrow or Roboto Condensed fonts are required to use these themes.")
+  #   packageStartupMessage("NOTE: Either Tisa Sans Pro or Roboto Condensed fonts are required to use these themes.")
   #   packageStartupMessage("      Please use DGThemes::import_roboto_condensed() to install Roboto Condensed and")
-  #   packageStartupMessage("      if Arial Narrow is not on your system, please see https://bit.ly/arialnarrow")
+  #   packageStartupMessage("      if Tisa Sans Pro is not on your system, please see https://bit.ly/arialnarrow")
   # } # nocov end
 
 }

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A precise &amp; pristine ggplot2 theme with opinionated defaults and an emphasis on typography — theme_ipsum • DGThemes</title>
+<title>A precise &amp; pristine ggplot2 theme with opinionated defaults and an emphasis on typography — theme_premium • DGThemes</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:title" content="A precise &amp; pristine ggplot2 theme with opinionated defaults and an emphasis on typography — theme_ipsum" />
+<meta property="og:title" content="A precise &amp; pristine ggplot2 theme with opinionated defaults and an emphasis on typography — theme_premium" />
 
 <meta property="og:description" content="Also has a &quot;dark&quot; / &quot;modern&quot; version for the new RStudio theme" />
 <meta name="twitter:card" content="summary" />
@@ -116,7 +116,7 @@
     <div class="page-header">
     <h1>A precise &amp; pristine ggplot2 theme with opinionated defaults and an emphasis on typography</h1>
     <small class="dont-index">Source: <a href='https://github.com/dungates/DGThemes/blob/master/R/theme-ipsum.r'><code>R/theme-ipsum.r</code></a></small>
-    <div class="hidden name"><code>theme_ipsum.Rd</code></div>
+    <div class="hidden name"><code>theme_premium.Rd</code></div>
     </div>
 
     <div class="ref-description">
@@ -125,7 +125,7 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>theme_ipsum</span>(<span class='kw'>base_family</span> <span class='kw'>=</span> <span class='st'>"Arial Narrow"</span>, <span class='kw'>base_size</span> <span class='kw'>=</span> <span class='fl'>11.5</span>,
+    <pre class="usage"><span class='fu'>theme_premium</span>(<span class='kw'>base_family</span> <span class='kw'>=</span> <span class='st'>"Tisa Sans Pro"</span>, <span class='kw'>base_size</span> <span class='kw'>=</span> <span class='fl'>11.5</span>,
   <span class='kw'>plot_title_family</span> <span class='kw'>=</span> <span class='no'>base_family</span>, <span class='kw'>plot_title_size</span> <span class='kw'>=</span> <span class='fl'>18</span>,
   <span class='kw'>plot_title_face</span> <span class='kw'>=</span> <span class='st'>"bold"</span>, <span class='kw'>plot_title_margin</span> <span class='kw'>=</span> <span class='fl'>10</span>,
   <span class='kw'>subtitle_family</span> <span class='kw'>=</span> <span class='no'>base_family</span>, <span class='kw'>subtitle_size</span> <span class='kw'>=</span> <span class='fl'>12</span>,
@@ -200,14 +200,14 @@
     </tr>
     </table>
     
-    <h2 class="hasAnchor" id="why-arial-narrow-"><a class="anchor" href="#why-arial-narrow-"></a>Why Arial Narrow?</h2>
+    <h2 class="hasAnchor" id="why-arial-narrow-"><a class="anchor" href="#why-arial-narrow-"></a>Why Tisa Sans Pro?</h2>
 
     
-    <p>First and foremost, Arial Narrow is generally installed by default or readily
+    <p>First and foremost, Tisa Sans Pro is generally installed by default or readily
 available on any modern system, so it's "free"-ish; plus, it is a condensed font
 with solid default kerning pairs and geometric numbers.</p>
     
-    <h2 class="hasAnchor" id="building-upon-theme-ipsum"><a class="anchor" href="#building-upon-theme-ipsum"></a>Building upon <code>theme_ipsum</code></h2>
+    <h2 class="hasAnchor" id="building-upon-theme-ipsum"><a class="anchor" href="#building-upon-theme-ipsum"></a>Building upon <code>theme_premium</code></h2>
 
     
     <p>The function is setup in such a way that you can customize your own one by just
@@ -240,7 +240,7 @@ to register non-core fonts with the Windows graphics device.</p>
        <span class='kw'>title</span><span class='kw'>=</span><span class='st'>"Seminal ggplot2 scatterplot example"</span>,
        <span class='kw'>subtitle</span><span class='kw'>=</span><span class='st'>"A plot that is only useful for demonstration purposes"</span>,
        <span class='kw'>caption</span><span class='kw'>=</span><span class='st'>"Brought to you by the letter 'g'"</span>) +
-  <span class='fu'>theme_ipsum</span>()
+  <span class='fu'>theme_premium</span>()
 
 <span class='co'># seminal bar chart</span>
 
@@ -254,7 +254,7 @@ to register non-core fonts with the Windows graphics device.</p>
        <span class='kw'>title</span><span class='kw'>=</span><span class='st'>"Seminal ggplot2 bar chart example"</span>,
        <span class='kw'>subtitle</span><span class='kw'>=</span><span class='st'>"A plot that is only useful for demonstration purposes"</span>,
        <span class='kw'>caption</span><span class='kw'>=</span><span class='st'>"Brought to you by the letter 'g'"</span>) +
-  <span class='fu'>theme_ipsum</span>(<span class='kw'>grid</span><span class='kw'>=</span><span class='st'>"Y"</span>) +
+  <span class='fu'>theme_premium</span>(<span class='kw'>grid</span><span class='kw'>=</span><span class='st'>"Y"</span>) +
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span>(<span class='kw'>axis.text.y</span><span class='kw'>=</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_blank</a></span>())
 <span class='co'># }</span></pre>
   </div>
@@ -263,9 +263,9 @@ to register non-core fonts with the Windows graphics device.</p>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#why-arial-narrow-">Why Arial Narrow?</a></li>
+      <li><a href="#why-arial-narrow-">Why Tisa Sans Pro?</a></li>
 
-      <li><a href="#building-upon-theme-ipsum">Building upon <code>theme_ipsum</code></a></li>
+      <li><a href="#building-upon-theme-ipsum">Building upon <code>theme_premium</code></a></li>
 
       <li><a href="#gotchas">Gotchas</a></li>
       

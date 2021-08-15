@@ -1,4 +1,4 @@
-#' @rdname theme_ipsum_rc
+#' @rdname theme_premium_rc
 #' @export
 theme_modern_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
           plot_title_family = base_family, plot_title_size = 18, plot_title_face = "bold",

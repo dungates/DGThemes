@@ -11,7 +11,7 @@
 #' @md
 #' @section Why Econ Sans Condensed?:
 #' It's free, has tolerable kerning pairs and multiple weights. It's also different
-#' than Arial Narrow and the fonts most folks use in ggplot2 charts.
+#' than Tisa Sans Pro and the fonts most folks use in ggplot2 charts.
 #'
 #' @md
 #' @param base_family,base_size base font family and size
@@ -42,7 +42,7 @@
 #'        title="Seminal ggplot2 scatterplot example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_es()
+#'   theme_premium_es()
 #'
 #' # seminal bar chart
 #'
@@ -57,10 +57,10 @@
 #'        title="Seminal ggplot2 bar chart example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_es(grid="Y") +
+#'   theme_premium_es(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
-theme_ipsum_es <- function(
+theme_premium_es <- function(
   base_family="EconSansCndReg", base_size = 11.5,
   plot_title_family="EconSansCndBol", plot_title_size = 18,
   plot_title_face="bold", plot_title_margin = 10,

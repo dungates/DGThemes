@@ -7,8 +7,8 @@ test_that("we can do something", {
   tmp_y1 <- scale_y_comma()
   tmp_y2 <- scale_y_percent()
 
-  fil <- scale_fill_ipsum()
-  col <- scale_color_ipsum()
+  fil <- scale_fill_premium()
+  col <- scale_color_premium()
 
   gg_tmp <- ggplot2::ggplot() +
     ggplot2::labs(x="Thsi", y="This", title="This", subtitle="This", caption="Thsi")
@@ -21,10 +21,10 @@ test_that("we can do something", {
 
   invisible(gg_check(mtcars))
 
-  th <- theme_ipsum(grid="XY", axis="xy")
-  expect_that(th$plot.title$family, equals("Arial Narrow"))
+  th <- theme_premium(grid="XY", axis="xy")
+  expect_that(th$plot.title$family, equals("Tisa Sans Pro"))
 
-  thrc <- theme_ipsum_rc(grid="XY", axis="xy")
+  thrc <- theme_premium_rc(grid="XY", axis="xy")
   expect_that(thrc$plot.title$family, equals("Roboto Condensed"))
 
   invisible(scale_x_percent(sec.axis = sec_axis(~.+10)))
@@ -37,34 +37,34 @@ test_that("we can do something", {
   invisible(scale_x_comma(sec.axis = ~.+10))
   invisible(scale_y_comma(sec.axis = ~.+10))
 
-  invisible(theme_ipsum(grid=FALSE))
-  invisible(theme_ipsum_rc(grid=FALSE))
-  invisible(theme_ipsum(grid="XY"))
-  invisible(theme_ipsum_rc(grid="XY"))
-  invisible(theme_ipsum(grid="xy"))
-  invisible(theme_ipsum_rc(grid="xy"))
+  invisible(theme_premium(grid=FALSE))
+  invisible(theme_premium_rc(grid=FALSE))
+  invisible(theme_premium(grid="XY"))
+  invisible(theme_premium_rc(grid="XY"))
+  invisible(theme_premium(grid="xy"))
+  invisible(theme_premium_rc(grid="xy"))
 
-  invisible(theme_ipsum(axis=TRUE))
-  invisible(theme_ipsum_rc(axis=TRUE))
+  invisible(theme_premium(axis=TRUE))
+  invisible(theme_premium_rc(axis=TRUE))
 
-  invisible(theme_ipsum(axis=FALSE))
-  invisible(theme_ipsum_rc(axis=FALSE))
-  invisible(theme_ipsum(axis="xy"))
-  invisible(theme_ipsum_rc(axis="xy"))
-  invisible(theme_ipsum(axis=""))
-  invisible(theme_ipsum_rc(axis=""))
+  invisible(theme_premium(axis=FALSE))
+  invisible(theme_premium_rc(axis=FALSE))
+  invisible(theme_premium(axis="xy"))
+  invisible(theme_premium_rc(axis="xy"))
+  invisible(theme_premium(axis=""))
+  invisible(theme_premium_rc(axis=""))
 
   # invisible(update_geom_font_defaults())
-  # invisible(theme_ipsum(ticks=TRUE))
+  # invisible(theme_premium(ticks=TRUE))
   # invisible(import_roboto_condensed())
-  # invisible(theme_ipsum_rc(ticks=TRUE))
+  # invisible(theme_premium_rc(ticks=TRUE))
 
   expect_that(tmp_x1$expand, equals(c(0.01,0)))
   expect_that(tmp_x2$expand, equals(c(0.01,0)))
   expect_that(tmp_y1$expand, equals(c(0.01,0)))
   expect_that(tmp_y2$expand, equals(c(0.01,0)))
 
-  expect_that(ipsum_pal()(1), equals("#d18975"))
+  expect_that(premium_pal()(1), equals("#d18975"))
   expect_that(col$palette(1), equals("#d18975"))
   expect_that(fil$palette(1), equals("#d18975"))
 

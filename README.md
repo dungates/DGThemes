@@ -8,39 +8,40 @@ Additional Themes and Theme Components for ‘ggplot2’
 This is a personal package for themes and theme components for ggplot2,
 gt, and other tools as I discover and use them throughout R.
 
-The core theme: `theme_ipsum` (“ipsum” is Latin for “precise”) uses
-Arial Narrow which should be installed on practically any modern system,
-so it’s “free”-ish. This font is condensed, has solid default kerning
-pairs and geometric numbers. That’s what I consider the “font trifecta”
-must-have for charts. An additional quality for fonts for charts is that
-they have a diversity of weights. Arial Narrow (the one on most systems,
-anyway) does not have said diversity but this quality is not (IMO) a
-“must have”.
+The core theme: `theme_premium` (“premium” is Latin for “precise”) uses
+Tisa Sans Pro which should be installed on practically any modern
+system, so it’s “free”-ish. This font is condensed, has solid default
+kerning pairs and geometric numbers. That’s what I consider the “font
+trifecta” must-have for charts. An additional quality for fonts for
+charts is that they have a diversity of weights. Tisa Sans Pro (the one
+on most systems, anyway) does not have said diversity but this quality
+is not (IMO) a “must have”.
 
-The following functions are implemented/objects are exported:
+The following functions for ggplot2 are implemented/objects are
+exported:
 
 Themes:
 
 -   `theme_duncan`: Open Sans, Fira Sans
--   `theme_ipsum`: Arial Narrow
--   `theme_ipsum_gs`: Goldman Sans Condensed
--   `theme_ipsum_es`: Econ Sans Condensed
--   `theme_ipsum_rc`: Roboto Condensed
--   `theme_ipsum_ps`: IBM Plex Sans font
--   `theme_ipsum_pub`: Public Sans
--   `theme_ipsum_tw`: Titilium Web
+-   `theme_premium`: Tisa Sans Pro
+-   `theme_premium_gs`: Goldman Sans Condensed
+-   `theme_premium_es`: Econ Sans Condensed
+-   `theme_premium_rc`: Roboto Condensed
+-   `theme_premium_ps`: IBM Plex Sans font
+-   `theme_premium_pub`: Public Sans
+-   `theme_premium_tw`: Titilium Web
 -   `theme_modern_rc`: Roboto Condensed dark theme
 -   `theme_ft_rc`: Dark theme based on FT’s dark theme (Roboto
     Condensed)
 
 Scales (that align with various themes):
 
--   `scale_color_ipsum`: Discrete color & fill scales based on the ipsum
-    palette
--   `scale_colour_ipsum`: Discrete color & fill scales based on the
-    ipsum palette
--   `scale_fill_ipsum`: Discrete color & fill scales based on the ipsum
-    palette
+-   `scale_color_premium`: Discrete color & fill scales based on the
+    premium palette
+-   `scale_colour_premium`: Discrete color & fill scales based on the
+    premium palette
+-   `scale_fill_premium`: Discrete color & fill scales based on the
+    premium palette
 -   `scale_color_ft`: Discrete color & fill scales based on the FT
     palette
 -   `scale_colour_ft`: Discrete color & fill scales based on the FT
@@ -58,14 +59,14 @@ Scales (that align with various themes):
 
 Palettes/Named Colors:
 
--   `ipsum_pal`: A muted, qualitative color palette
+-   `premium_pal`: A muted, qualitative color palette
 -   `ft_cols`: FT color palette
 -   `ft_pal`: A bright qualitative color palette
 -   `ft_text_col`: FT color palette
 
 Fonts:
 
--   `font_an`: Arial Narrow font name R variable aliases
+-   `font_an`: Tisa Sans Pro font name R variable aliases
 -   `font_es`: Econ Sans font name R variable aliases
 -   `font_es_bold`: Econ Sans font name R variable aliases
 -   `font_es_light`: Econ Sans font name R variable aliases
@@ -85,8 +86,8 @@ Fonts:
 
 R Markdown:
 
--   `ipsum`: ipsum R markdown template
--   `ipsum_pdf`: ipsum R markdown template for PDF output
+-   `premium`: premium R markdown template
+-   `premium_pdf`: premium R markdown template for PDF output
 
 Utilities:
 
@@ -105,6 +106,11 @@ Utilities:
 -   `update_geom_font_defaults`: Update matching font defaults for text
     geoms
 
+The following functions for gt are implemented/objects are exported:
+
+-   `gt_theme_duncan` - Makes a gt table with black outlines and bold
+    title/column labels
+
 ### Installation
 
 ``` r
@@ -114,6 +120,7 @@ devtools::install_github("dungates/DGThemes")
 ### Usage
 
 ``` r
+devtools::load_all()
 library(DGThemes)
 library(gcookbook)
 library(tidyverse)
@@ -124,7 +131,7 @@ packageVersion("DGThemes")
 
     ## [1] '0.8.6'
 
-### Base theme (Arial Narrow)
+### Base theme (Tisa Sans Pro)
 
 ``` r
 ggplot(mtcars, aes(mpg, wt)) +
@@ -133,7 +140,7 @@ ggplot(mtcars, aes(mpg, wt)) +
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
-  theme_ipsum()
+  theme_premium()
 ```
 
 ![](README_files/figure-gfm/an-1.png)<!-- -->
@@ -147,7 +154,7 @@ ggplot(mtcars, aes(mpg, wt)) +
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
-  theme_ipsum_rc()
+  theme_premium_rc()
 ```
 
 ![](README_files/figure-gfm/rc-1.png)<!-- -->
@@ -173,15 +180,15 @@ ggplot(mpg, aes(displ, hwy)) +
   geom_jitter(aes(color=class, fill=class), size=3, shape=21, alpha=1/2) +
   scale_x_continuous(expand=c(0,0), limits=c(1, 8), breaks=1:8) +
   scale_y_continuous(expand=c(0,0), limits=c(10, 50)) +
-  scale_color_ipsum() +
-  scale_fill_ipsum() +
+  scale_color_premium() +
+  scale_fill_premium() +
   facet_wrap(~class, scales="free") +
   labs(
     title="IBM Plex Sans Test",
     subtitle="This is a subtitle to see the how it looks in IBM Plex Sans",
     caption="Source: DGThemes & IBM"
   ) +
-  theme_ipsum_ps(grid="XY", axis="xy") +
+  theme_premium_ps(grid="XY", axis="xy") +
   theme(legend.position="none") -> gg
 
 flush_ticks(gg)
@@ -205,15 +212,15 @@ ggplot(mpg, aes(displ, hwy)) +
   geom_jitter(aes(color=class, fill=class), size=3, shape=21, alpha=1/2) +
   scale_x_continuous(expand=c(0,0), limits=c(1, 8), breaks=1:8) +
   scale_y_continuous(expand=c(0,0), limits=c(10, 50)) +
-  scale_color_ipsum() +
-  scale_fill_ipsum() +
+  scale_color_premium() +
+  scale_fill_premium() +
   facet_wrap(~class, scales="free") +
   labs(
     title="Titillium Web",
     subtitle="This is a subtitle to see the how it looks in Titillium Web",
     caption="Source: DGThemes & Google"
   ) +
-  theme_ipsum_tw(grid="XY", axis="xy") +
+  theme_premium_tw(grid="XY", axis="xy") +
   theme(legend.position="none") -> gg
 
 flush_ticks(gg)
@@ -239,8 +246,8 @@ ggplot(mtcars, aes(mpg, wt)) +
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
-  scale_color_ipsum() +
-  theme_ipsum_rc()
+  scale_color_premium() +
+  theme_premium_rc()
 ```
 
 ![](README_files/figure-gfm/sc-1.png)<!-- -->
@@ -257,7 +264,7 @@ count(mpg, class) %>%
        title="Seminal ggplot2 column chart example with percents",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
-  theme_ipsum(grid="Y")
+  theme_premium(grid="Y")
 ```
 
 ![](README_files/figure-gfm/ax1-1.png)<!-- -->
@@ -265,13 +272,13 @@ count(mpg, class) %>%
 ``` r
 ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
   geom_area() +
-  scale_fill_ipsum() +
+  scale_fill_premium() +
   scale_x_continuous(expand=c(0,0)) +
   scale_y_comma() +
   labs(title="Age distribution of population in the U.S., 1900-2002",
        subtitle="Example data from the R Graphics Cookbook",
        caption="Source: R Graphics Cookbook") +
-  theme_ipsum_rc(grid="XY") +
+  theme_premium_rc(grid="XY") +
   theme(axis.text.x=element_text(hjust=c(0, 0.5, 0.5, 0.5, 1))) +
   theme(legend.position="bottom")
 ```
@@ -297,7 +304,7 @@ count(mpg, class) %>%
        title="Seminal ggplot2 column chart example with commas",
        subtitle="A plot that is only useful for demonstration purposes, esp since you'd never\nreally want direct labels and axis labels",
        caption="Brought to you by the letter 'g'") + 
-  theme_ipsum_rc(grid="X")
+  theme_premium_rc(grid="X")
 ```
 
 ![](README_files/figure-gfm/ax3-1.png)<!-- -->
@@ -313,7 +320,7 @@ ggplot(mtcars, aes(mpg, wt)) +
        title="Thisy is a titlle",
        subtitle="This is a subtitley",
        caption="This is a captien") +
-  theme_ipsum_rc(grid="XY") -> gg
+  theme_premium_rc(grid="XY") -> gg
 
 DGThemes::gg_check(gg)
 ```
@@ -330,10 +337,11 @@ DGThemes::gg_check(gg)
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|-----:|---------:|-----:|
-| R    |       26 | 0.43 | 1887 | 0.44 |         359 | 0.39 |     1180 | 0.44 |
+| R    |       27 | 0.41 | 1955 | 0.43 |         359 | 0.39 |     1200 | 0.44 |
 | SVG  |        2 | 0.03 |  150 | 0.03 |           0 | 0.00 |        0 | 0.00 |
-| Rmd  |        2 | 0.03 |  122 | 0.03 |          97 | 0.11 |      167 | 0.06 |
-| SUM  |       30 | 0.50 | 2159 | 0.50 |         456 | 0.50 |     1347 | 0.50 |
+| Rmd  |        2 | 0.03 |  123 | 0.03 |          99 | 0.11 |      169 | 0.06 |
+| YAML |        2 | 0.03 |   57 | 0.01 |           4 | 0.00 |        2 | 0.00 |
+| SUM  |       33 | 0.50 | 2285 | 0.50 |         462 | 0.50 |     1371 | 0.50 |
 
 clock Package Metrics for DGThemes
 
