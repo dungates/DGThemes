@@ -2,7 +2,7 @@
 output: rmarkdown::github_document
 ---
 
-## DGThemes
+## DGThemes, some test text for github actions
 
 Additional Themes and Theme Components for 'ggplot2'
 
@@ -12,7 +12,7 @@ This is a personal package for themes and theme components for ggplot2, gt, and 
 
 The core theme: `theme_ipsum` ("ipsum" is Latin for "precise") uses Arial Narrow which should be installed on practically any modern system, so it's "free"-ish. This font is condensed, has solid default kerning pairs and geometric numbers. That's what I consider the "font trifecta" must-have for charts. An additional quality for fonts for charts is that they have a diversity of weights. Arial Narrow (the one on most systems, anyway) does not have said diversity but this quality is not (IMO) a "must have".
 
-The following functions are implemented/objects are exported:
+The following functions for ggplot2 are implemented/objects are exported:
 
 Themes:
 
@@ -83,6 +83,10 @@ Utilities:
 - `import_titillium_web`:  Import Titillium Web font for use in charts
 - `modern_geom_defaults`:  Change geom defaults from black to white for the modern theme
 - `update_geom_font_defaults`: Update matching font defaults for text geoms
+
+The following functions for gt are implemented/objects are exported:
+
+- `gt_theme_duncan` - Makes a gt table with black outlines and bold title/column labels
 
 ### Installation
 
