@@ -22,5 +22,9 @@ An object of class `gt_tbl`.
 A custom theme for tables generated with [gt::gt].
 }
 \examples{
-mtcars \%>\% head() \%>\% gt::gt() \%>\% DGThemes::gt_theme_duncan()
+mtcars \%>\%
+  head() \%>\%
+  gt::gt() \%>\%
+  gt::tab_header(title = "Cars n stuff", subtitle = "I don't know anything about cars") \%>\%
+  DGThemes::gt_theme_duncan()
 }

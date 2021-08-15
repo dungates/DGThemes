@@ -8,10 +8,12 @@
 #' @param ... Additional arguments passed to [gt::tab_options].
 #'
 #' @return An object of class `gt_tbl`.
-#' @importFrom dplyr %>%
-#' @import gt
 #' @examples
-#' mtcars %>% head() %>% gt::gt() %>% DGThemes::gt_theme_duncan()
+#' mtcars %>%
+#'   head() %>%
+#'   gt::gt() %>%
+#'   gt::tab_header(title = "Cars n stuff", subtitle = "I don't know anything about cars") %>%
+#'   DGThemes::gt_theme_duncan()
 #' @export
 gt_theme_duncan <- function(data, bg_color = "#FFFFFF", all_caps = F, ...) {
   data %>%

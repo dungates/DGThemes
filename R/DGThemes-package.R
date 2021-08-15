@@ -22,7 +22,7 @@
 #' @docType package
 #' @author Duncan Gates (duncangates.me)
 #' @keywords internal
-#' @import ggplot2 grid scales extrafont grDevices
+#' @import ggplot2 grid scales extrafont grDevices gt
 #' @importFrom magrittr %>%
 #' @importFrom gdtools set_dummy_conf
 #' @import rmarkdown knitr htmltools
