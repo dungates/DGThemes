@@ -32,6 +32,6 @@ Useful links:
 
 }
 \author{
-Bob Rudis (bob@rud.is)
+Duncan Gates (duncangates.me)
 }
 \keyword{internal}
