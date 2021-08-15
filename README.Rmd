@@ -97,7 +97,6 @@ devtools::install_github("dungates/DGThemes")
 ### Usage
 
 ```{r message=FALSE, warning=FALSE, error=FALSE}
-devtools::load_all()
 library(DGThemes)
 library(gcookbook)
 library(tidyverse)
