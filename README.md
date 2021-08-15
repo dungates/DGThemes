@@ -1,34 +1,12 @@
 
-[![Project Status: Active – The project has reached a stable, usable
-state and is being actively
-developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Signed
-by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
-![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-100%25-lightgrey.svg)
-[![Linux build
-Status](https://travis-ci.org/hrbrmstr/DGThemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/DGThemes)
-[![Coverage
-Status](https://codecov.io/gh/hrbrmstr/DGThemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/DGThemes)
-[![cran
-checks](https://cranchecks.info/badges/worst/DGThemes)](https://cranchecks.info/pkgs/DGThemes)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/DGThemes)](https://www.r-pkg.org/pkg/DGThemes)
-![Minimal R
-Version](https://img.shields.io/badge/R%3E%3D-3.4.0-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![downloads](https://cranlogs.r-pkg.org/badges/grand-total/DGThemes)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545422.svg)](https://doi.org/10.5281/zenodo.2545422)
-
 ## DGThemes
 
 Additional Themes and Theme Components for ‘ggplot2’
 
------
+------------------------------------------------------------------------
 
-This is a very focused package that provides typography-centric themes
-and theme components for ggplot2. It’s a an extract/riff of
-[`hrbrmisc`](https://github.com/hrbrmstr/hrbrmisc) created by request.
+This is a personal package for themes and theme components for ggplot2,
+gt, and other tools as I discover and use them throughout R.
 
 The core theme: `theme_ipsum` (“ipsum” is Latin for “precise”) uses
 Arial Narrow which should be installed on practically any modern system,
@@ -43,107 +21,95 @@ The following functions are implemented/objects are exported:
 
 Themes:
 
-  - `theme_ipsum`: Arial Narrow
-  - `theme_ipsum_gs`: Goldman Sans Condensed
-  - `theme_ipsum_es`: Econ Sans Condensed
-  - `theme_ipsum_rc`: Roboto Condensed
-  - `theme_ipsum_ps`: IBM Plex Sans font
-  - `theme_ipsum_pub`: Public Sans
-  - `theme_ipsum_tw`: Titilium Web
-  - `theme_modern_rc`: Roboto Condensed dark theme
-  - `theme_ft_rc`: Dark theme based on FT’s dark theme (Roboto
+-   `theme_duncan`: Open Sans, Fira Sans
+-   `theme_ipsum`: Arial Narrow
+-   `theme_ipsum_gs`: Goldman Sans Condensed
+-   `theme_ipsum_es`: Econ Sans Condensed
+-   `theme_ipsum_rc`: Roboto Condensed
+-   `theme_ipsum_ps`: IBM Plex Sans font
+-   `theme_ipsum_pub`: Public Sans
+-   `theme_ipsum_tw`: Titilium Web
+-   `theme_modern_rc`: Roboto Condensed dark theme
+-   `theme_ft_rc`: Dark theme based on FT’s dark theme (Roboto
     Condensed)
 
 Scales (that align with various themes):
 
-  - `scale_color_ipsum`: Discrete color & fill scales based on the ipsum
+-   `scale_color_ipsum`: Discrete color & fill scales based on the ipsum
     palette
-  - `scale_colour_ipsum`: Discrete color & fill scales based on the
+-   `scale_colour_ipsum`: Discrete color & fill scales based on the
     ipsum palette
-  - `scale_fill_ipsum`: Discrete color & fill scales based on the ipsum
+-   `scale_fill_ipsum`: Discrete color & fill scales based on the ipsum
     palette
-  - `scale_color_ft`: Discrete color & fill scales based on the FT
+-   `scale_color_ft`: Discrete color & fill scales based on the FT
     palette
-  - `scale_colour_ft`: Discrete color & fill scales based on the FT
+-   `scale_colour_ft`: Discrete color & fill scales based on the FT
     palette
-  - `scale_fill_ft`: Discrete color & fill scales based on the FT
+-   `scale_fill_ft`: Discrete color & fill scales based on the FT
     palette
-  - `scale_x_comma`: X & Y scales with opinionated presets for percent &
+-   `scale_x_comma`: X & Y scales with opinionated presets for percent &
     comma label formats
-  - `scale_x_percent`: X & Y scales with opinionated presets for percent
+-   `scale_x_percent`: X & Y scales with opinionated presets for percent
     & comma label formats
-  - `scale_y_comma`: X & Y scales with opinionated presets for percent &
+-   `scale_y_comma`: X & Y scales with opinionated presets for percent &
     comma label formats
-  - `scale_y_percent`: X & Y scales with opinionated presets for percent
+-   `scale_y_percent`: X & Y scales with opinionated presets for percent
     & comma label formats
 
 Palettes/Named Colors:
 
-  - `ipsum_pal`: A muted, qualitative color palette
-  - `ft_cols`: FT color palette
-  - `ft_pal`: A bright qualitative color palette
-  - `ft_text_col`: FT color palette
+-   `ipsum_pal`: A muted, qualitative color palette
+-   `ft_cols`: FT color palette
+-   `ft_pal`: A bright qualitative color palette
+-   `ft_text_col`: FT color palette
 
 Fonts:
 
-  - `font_an`: Arial Narrow font name R variable aliases
-  - `font_es`: Econ Sans font name R variable aliases
-  - `font_es_bold`: Econ Sans font name R variable aliases
-  - `font_es_light`: Econ Sans font name R variable aliases
-  - `font_rc`: Roboto Condensed font name R variable aliases
-  - `font_rc_light`: Roboto Condensed font name R variable aliases
-  - `font_pub`: Public Sans font name R variable aliases
-  - `font_pub_bold`: Public Sans font name R variable aliases
-  - `font_pub_light`: Public Sans font name R variable aliases
-  - `font_pub_thin`: Public Sans font name R variable aliases
-  - `font_ps`: PlexSans font name R variable aliases
-  - `font_ps_light`: PlexSans font name R variable aliases
-  - `font_tw`: Titillium Web font name R variable aliases
-  - `font_tw_bold`: Titillium Web font name R variable aliases
-  - `font_tw_light`: Titillium Web font name R variable aliases
+-   `font_an`: Arial Narrow font name R variable aliases
+-   `font_es`: Econ Sans font name R variable aliases
+-   `font_es_bold`: Econ Sans font name R variable aliases
+-   `font_es_light`: Econ Sans font name R variable aliases
+-   `font_fs`: Fira Sans font name R variable aliases
+-   `font_rc`: Roboto Condensed font name R variable aliases
+-   `font_rc_light`: Roboto Condensed font name R variable aliases
+-   `font_pub`: Public Sans font name R variable aliases
+-   `font_pub_bold`: Public Sans font name R variable aliases
+-   `font_pub_light`: Public Sans font name R variable aliases
+-   `font_pub_thin`: Public Sans font name R variable aliases
+-   `font_os`: Open Sans font name R variable aliases
+-   `font_ps`: PlexSans font name R variable aliases
+-   `font_ps_light`: PlexSans font name R variable aliases
+-   `font_tw`: Titillium Web font name R variable aliases
+-   `font_tw_bold`: Titillium Web font name R variable aliases
+-   `font_tw_light`: Titillium Web font name R variable aliases
 
 R Markdown:
 
-  - `ipsum`: ipsum R markdown template
-  - `ipsum_pdf`: ipsum R markdown template for PDF output
+-   `ipsum`: ipsum R markdown template
+-   `ipsum_pdf`: ipsum R markdown template for PDF output
 
 Utilities:
 
-  - `flush_ticks`: Makes axis text labels flush on the ends
-  - `ft_geom_defaults`: Change geom defaults from black to custom lights
+-   `flush_ticks`: Makes axis text labels flush on the ends
+-   `ft_geom_defaults`: Change geom defaults from black to custom lights
     for the FT theme
-  - `gg_check`: Spell check ggplot2 plot labels
-  - `import_econ_sans`: Import Econ Sans Condensed font for use in
+-   `gg_check`: Spell check ggplot2 plot labels
+-   `import_econ_sans`: Import Econ Sans Condensed font for use in
     charts
-  - `import_plex_sans`: Import IBM Plex Sans font for use in charts
-  - `import_roboto_condensed`: Import Roboto Condensed font for use in
+-   `import_plex_sans`: Import IBM Plex Sans font for use in charts
+-   `import_roboto_condensed`: Import Roboto Condensed font for use in
     charts
-  - `import_titillium_web`: Import Titillium Web font for use in charts
-  - `modern_geom_defaults`: Change geom defaults from black to white for
+-   `import_titillium_web`: Import Titillium Web font for use in charts
+-   `modern_geom_defaults`: Change geom defaults from black to white for
     the modern theme
-  - `update_geom_font_defaults`: Update matching font defaults for text
+-   `update_geom_font_defaults`: Update matching font defaults for text
     geoms
 
 ### Installation
 
 ``` r
-install.packages("DGThemes") # NOTE: CRAN version is 0.8.0
-# or
-install.packages("DGThemes", repos = c("https://cinc.rud.is", "https://cloud.r-project.org/"))
-# or
-remotes::install_git("https://git.rud.is/hrbrmstr/DGThemes.git")
-# or
-remotes::install_git("https://git.sr.ht/~hrbrmstr/DGThemes")
-# or
-remotes::install_gitlab("hrbrmstr/DGThemes")
-# or
-remotes::install_bitbucket("hrbrmstr/DGThemes")
-# or
-remotes::install_github("hrbrmstr/DGThemes")
+devtools::install_github("dungates/DGThemes")
 ```
-
-NOTE: To use the ‘remotes’ install options you will need to have the
-[{remotes} package](https://github.com/r-lib/remotes) installed.
 
 ### Usage
 
@@ -154,8 +120,9 @@ library(tidyverse)
 
 # current verison
 packageVersion("DGThemes")
-## [1] '0.8.6'
 ```
+
+    ## [1] '0.8.6'
 
 ### Base theme (Arial Narrow)
 
@@ -169,7 +136,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum()
 ```
 
-<img src="man/figures/README-an-1.png" width="672" />
+![](README_files/figure-gfm/an-1.png)<!-- -->
 
 ### Roboto Condensed
 
@@ -183,9 +150,9 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="man/figures/README-rc-1.png" width="672" />
+![](README_files/figure-gfm/rc-1.png)<!-- -->
 
-### New FT Theme\!
+### New FT Theme!
 
 ``` r
 ggplot(mtcars, aes(mpg, wt)) +
@@ -197,7 +164,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ft_rc()
 ```
 
-<img src="man/figures/README-ft-1.png" width="672" />
+![](README_files/figure-gfm/ft-1.png)<!-- -->
 
 ### IBM Plex Sans
 
@@ -218,11 +185,18 @@ ggplot(mpg, aes(displ, hwy)) +
   theme(legend.position="none") -> gg
 
 flush_ticks(gg)
-## theme(axis.text.x=element_text(hjust=c(0, rep(0.5, 6), 1))) +
-## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
 ```
 
-<img src="man/figures/README-ps-1.png" width="960" />
+    ## Warning: Vectorized input to `element_text()` is not officially supported.
+    ## Results may be unexpected or may change in future versions of ggplot2.
+
+    ## Warning: Vectorized input to `element_text()` is not officially supported.
+    ## Results may be unexpected or may change in future versions of ggplot2.
+
+    ## theme(axis.text.x=element_text(hjust=c(0, rep(0.5, 6), 1))) +
+    ## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
+
+![](README_files/figure-gfm/ps-1.png)<!-- -->
 
 ### Titillium Web
 
@@ -243,11 +217,18 @@ ggplot(mpg, aes(displ, hwy)) +
   theme(legend.position="none") -> gg
 
 flush_ticks(gg)
-## theme(axis.text.x=element_text(hjust=c(0, rep(0.5, 6), 1))) +
-## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
 ```
 
-<img src="man/figures/README-tw-1.png" width="960" />
+    ## Warning: Vectorized input to `element_text()` is not officially supported.
+    ## Results may be unexpected or may change in future versions of ggplot2.
+
+    ## Warning: Vectorized input to `element_text()` is not officially supported.
+    ## Results may be unexpected or may change in future versions of ggplot2.
+
+    ## theme(axis.text.x=element_text(hjust=c(0, rep(0.5, 6), 1))) +
+    ## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
+
+![](README_files/figure-gfm/tw-1.png)<!-- -->
 
 ### Scales (Color/Fill)
 
@@ -262,7 +243,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="man/figures/README-sc-1.png" width="672" />
+![](README_files/figure-gfm/sc-1.png)<!-- -->
 
 ### Scales (Axis)
 
@@ -279,7 +260,7 @@ count(mpg, class) %>%
   theme_ipsum(grid="Y")
 ```
 
-<img src="man/figures/README-ax1-1.png" width="672" />
+![](README_files/figure-gfm/ax1-1.png)<!-- -->
 
 ``` r
 ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
@@ -295,7 +276,10 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   theme(legend.position="bottom")
 ```
 
-<img src="man/figures/README-ax2-1.png" width="672" />
+    ## Warning: Vectorized input to `element_text()` is not officially supported.
+    ## Results may be unexpected or may change in future versions of ggplot2.
+
+![](README_files/figure-gfm/ax2-1.png)<!-- -->
 
 ``` r
 update_geom_font_defaults(font_rc_light)
@@ -316,7 +300,7 @@ count(mpg, class) %>%
   theme_ipsum_rc(grid="X")
 ```
 
-<img src="man/figures/README-ax3-1.png" width="672" />
+![](README_files/figure-gfm/ax3-1.png)<!-- -->
 
 ### Spellcheck ggplot2 labels
 
@@ -331,21 +315,27 @@ ggplot(mtcars, aes(mpg, wt)) +
        caption="This is a captien") +
   theme_ipsum_rc(grid="XY") -> gg
 
-gg_check(gg)
-## Possible misspelled words in [title]: (Thisy, titlle)
-## Possible misspelled words in [subtitle]: (subtitley)
-## Possible misspelled words in [caption]: (captien)
+DGThemes::gg_check(gg)
 ```
 
-<img src="man/figures/README-sp-1.png" width="672" />
+    ## Possible misspelled words in [title]: (Thisy, titlle)
+
+    ## Possible misspelled words in [subtitle]: (subtitley)
+
+    ## Possible misspelled words in [caption]: (captien)
+
+![](README_files/figure-gfm/sp-1.png)<!-- -->
 
 ### DGThemes Metrics
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
-| :--- | -------: | ---: | ---: | ---: | ----------: | ---: | -------: | ---: |
-| R    |       24 | 0.89 | 1724 | 0.80 |         327 | 0.72 |      908 | 0.84 |
-| HTML |        1 | 0.04 |  297 | 0.14 |          32 | 0.07 |        2 | 0.00 |
-| Rmd  |        2 | 0.07 |  129 | 0.06 |          98 | 0.21 |      168 | 0.16 |
+|:-----|---------:|-----:|-----:|-----:|------------:|-----:|---------:|-----:|
+| R    |       26 | 0.43 | 1887 | 0.44 |         359 | 0.39 |     1180 | 0.44 |
+| SVG  |        2 | 0.03 |  150 | 0.03 |           0 | 0.00 |        0 | 0.00 |
+| Rmd  |        2 | 0.03 |  122 | 0.03 |          97 | 0.11 |      167 | 0.06 |
+| SUM  |       30 | 0.50 | 2159 | 0.50 |         456 | 0.50 |     1347 | 0.50 |
+
+clock Package Metrics for DGThemes
 
 ### Code of Conduct
 

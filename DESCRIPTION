@@ -29,8 +29,8 @@ Description: A compilation of extra 'ggplot2' themes, scales and utilities, incl
     'Titillium Web' <https://fonts.google.com/specimen/Titillium+Web>, and
     'Public Sans' <https://github.com/uswds/public-sans/> fonts
     are also included to support their respective typography-oriented themes.
-URL: http://github.com/hrbrmstr/DGThemes
-BugReports: https://github.com/hrbrmstr/DGThemes/issues
+URL: http://github.com/dungates/DGThemes
+BugReports: https://github.com/dungates/DGThemes/issues
 Copyright: file inst/COPYRIGHTS
 License: MIT + file LICENSE
 Encoding: UTF-8

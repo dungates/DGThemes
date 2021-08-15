@@ -3,7 +3,7 @@
     "path": "~/Projects/DGThemes/README.Rmd",
     "project_path": "README.Rmd",
     "type": "r_markdown",
-    "hash": "2570946483",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1629056650294.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "95,17",
-        "scrollLine": "89"
+        "cursorPosition": "92,9",
+        "scrollLine": "78"
     },
     "folds": "",
-    "lastKnownWriteTime": 1629056686,
+    "lastKnownWriteTime": 1629057474,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1629056686231,
+    "last_content_update": 1629057474600,
     "read_only": false,
     "read_only_alternatives": []
 }

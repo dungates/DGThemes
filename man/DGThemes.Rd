@@ -26,8 +26,8 @@ to register non-core fonts with the Windows graphics device.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{http://github.com/hrbrmstr/DGThemes}
-  \item Report bugs at \url{https://github.com/hrbrmstr/DGThemes/issues}
+  \item \url{http://github.com/dungates/DGThemes}
+  \item Report bugs at \url{https://github.com/dungates/DGThemes/issues}
 }
 
 }

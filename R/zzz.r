@@ -11,7 +11,7 @@
 
   # if (interactive()) {
   #   packageStartupMessage(paste0("DGThemes is under *active* development. ",
-  #                                "See https://github.com/hrbrmstr/DGThemes for info/news."))
+  #                                "See https://github.com/dungates/DGThemes for info/news."))
   # }
 
   # Suggestion by @alexwhan
