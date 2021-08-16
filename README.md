@@ -111,23 +111,49 @@ The following functions for gt are implemented/objects are exported:
 -   `gt_theme_duncan` - Makes a gt table with black outlines and bold
     title/column labels
 
+### Installation
+
 ``` r
+# If this ever gets on the CRAN
+# install.packages("DGThemes")
+# devtools::install_github("dungates/DGThemes")
+remotes::install_github("dungates/DGThemes")
+```
+
+NOTE: To use the ‘remotes’ install options you will need to have the
+[{remotes} package](https://github.com/r-lib/remotes) installed.
+
+### Usage
+
+``` r
+library(DGThemes)
+library(gcookbook)
 library(tidyverse)
+
+# current verison
+packageVersion("DGThemes")
+```
+
+    ## [1] '0.8.6'
+
+### Base theme (Tisa Sans Pro)
+
+``` r
 mtcars %>%
-    arrange(desc(mpg)) %>%
+    dplyr::arrange(dplyr::desc(mpg)) %>%
     head() %>%
     gt::gt() %>%
     gt::tab_header(title = "Cars n stuff", subtitle = "I don't know anything about cars") %>%
     DGThemes::gt_theme_duncan()
 ```
 
-<div id="njlzdoeuyk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="tczgdmttqp" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#njlzdoeuyk .gt_table {
+#tczgdmttqp .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -152,7 +178,7 @@ html {
   border-left-color: black;
 }
 
-#njlzdoeuyk .gt_heading {
+#tczgdmttqp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -164,7 +190,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#njlzdoeuyk .gt_title {
+#tczgdmttqp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -174,7 +200,7 @@ html {
   border-bottom-width: 0;
 }
 
-#njlzdoeuyk .gt_subtitle {
+#tczgdmttqp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -184,13 +210,13 @@ html {
   border-top-width: 0;
 }
 
-#njlzdoeuyk .gt_bottom_border {
+#tczgdmttqp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#njlzdoeuyk .gt_col_headings {
+#tczgdmttqp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 4px;
   border-top-color: black;
@@ -205,7 +231,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#njlzdoeuyk .gt_col_heading {
+#tczgdmttqp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -225,7 +251,7 @@ html {
   overflow-x: hidden;
 }
 
-#njlzdoeuyk .gt_column_spanner_outer {
+#tczgdmttqp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -237,15 +263,15 @@ html {
   padding-right: 4px;
 }
 
-#njlzdoeuyk .gt_column_spanner_outer:first-child {
+#tczgdmttqp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#njlzdoeuyk .gt_column_spanner_outer:last-child {
+#tczgdmttqp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#njlzdoeuyk .gt_column_spanner {
+#tczgdmttqp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -257,7 +283,7 @@ html {
   width: 100%;
 }
 
-#njlzdoeuyk .gt_group_heading {
+#tczgdmttqp .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -279,7 +305,7 @@ html {
   vertical-align: middle;
 }
 
-#njlzdoeuyk .gt_empty_group_heading {
+#tczgdmttqp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -294,15 +320,15 @@ html {
   vertical-align: middle;
 }
 
-#njlzdoeuyk .gt_from_md > :first-child {
+#tczgdmttqp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#njlzdoeuyk .gt_from_md > :last-child {
+#tczgdmttqp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#njlzdoeuyk .gt_row {
+#tczgdmttqp .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -321,7 +347,7 @@ html {
   overflow-x: hidden;
 }
 
-#njlzdoeuyk .gt_stub {
+#tczgdmttqp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -333,7 +359,7 @@ html {
   padding-left: 12px;
 }
 
-#njlzdoeuyk .gt_summary_row {
+#tczgdmttqp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -343,7 +369,7 @@ html {
   padding-right: 5px;
 }
 
-#njlzdoeuyk .gt_first_summary_row {
+#tczgdmttqp .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -353,7 +379,7 @@ html {
   border-top-color: #D3D3D3;
 }
 
-#njlzdoeuyk .gt_grand_summary_row {
+#tczgdmttqp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -363,7 +389,7 @@ html {
   padding-right: 5px;
 }
 
-#njlzdoeuyk .gt_first_grand_summary_row {
+#tczgdmttqp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -373,11 +399,11 @@ html {
   border-top-color: #D3D3D3;
 }
 
-#njlzdoeuyk .gt_striped {
+#tczgdmttqp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#njlzdoeuyk .gt_table_body {
+#tczgdmttqp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -386,7 +412,7 @@ html {
   border-bottom-color: #D3D3D3;
 }
 
-#njlzdoeuyk .gt_footnotes {
+#tczgdmttqp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -400,13 +426,13 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#njlzdoeuyk .gt_footnote {
+#tczgdmttqp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#njlzdoeuyk .gt_sourcenotes {
+#tczgdmttqp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -420,41 +446,41 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#njlzdoeuyk .gt_sourcenote {
+#tczgdmttqp .gt_sourcenote {
   font-size: 12px;
   padding: 10px;
 }
 
-#njlzdoeuyk .gt_left {
+#tczgdmttqp .gt_left {
   text-align: left;
 }
 
-#njlzdoeuyk .gt_center {
+#tczgdmttqp .gt_center {
   text-align: center;
 }
 
-#njlzdoeuyk .gt_right {
+#tczgdmttqp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#njlzdoeuyk .gt_font_normal {
+#tczgdmttqp .gt_font_normal {
   font-weight: normal;
 }
 
-#njlzdoeuyk .gt_font_bold {
+#tczgdmttqp .gt_font_bold {
   font-weight: bold;
 }
 
-#njlzdoeuyk .gt_font_italic {
+#tczgdmttqp .gt_font_italic {
   font-style: italic;
 }
 
-#njlzdoeuyk .gt_super {
+#tczgdmttqp .gt_super {
   font-size: 65%;
 }
 
-#njlzdoeuyk .gt_footnote_marks {
+#tczgdmttqp .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -557,45 +583,6 @@ html {
 </table>
 </div>
 
-### Installation
-
-``` r
-# If this ever gets on the CRAN
-# install.packages("DGThemes")
-# devtools::install_github("dungates/DGThemes")
-remotes::install_github("dungates/DGThemes")
-```
-
-    ## Downloading GitHub repo dungates/DGThemes@HEAD
-
-    ## 
-    ##      checking for file ‘/private/var/folders/ld/xmm5dtcj17gf5p6yhc56t0mm0000gn/T/RtmpsYtj92/remotes1752cb7b971c/dungates-DGThemes-7c86e2f/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/ld/xmm5dtcj17gf5p6yhc56t0mm0000gn/T/RtmpsYtj92/remotes1752cb7b971c/dungates-DGThemes-7c86e2f/DESCRIPTION’
-    ##   ─  preparing ‘DGThemes’:
-    ##      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
-    ##   ─  checking for LF line-endings in source and make files and shell scripts
-    ##   ─  checking for empty or unneeded directories
-    ##   ─  building ‘DGThemes_0.8.6.tar.gz’
-    ##      
-    ## 
-
-NOTE: To use the ‘remotes’ install options you will need to have the
-[{remotes} package](https://github.com/r-lib/remotes) installed.
-
-### Usage
-
-``` r
-library(DGThemes)
-library(gcookbook)
-library(tidyverse)
-
-# current verison
-packageVersion("DGThemes")
-```
-
-    ## [1] '0.8.6'
-
-### Base theme (Tisa Sans Pro)
-
 ``` r
 ggplot(tophitters2001, aes(hr, so)) +
   geom_point() +
@@ -608,9 +595,7 @@ ggplot(tophitters2001, aes(hr, so)) +
   theme_premium()
 ```
 
-    ## Warning: Removed 140 rows containing missing values (geom_text).
-
-![](README_files/figure-gfm/an-1.png)<!-- -->
+![](README_files/figure-gfm/at-1.png)<!-- -->
 
 ### Roboto Condensed
 
@@ -702,8 +687,6 @@ ggplot(tophitters2001, aes(hr, so, color = lg)) +
   theme(legend.position = "top")
 ```
 
-    ## Warning: Removed 140 rows containing missing values (geom_text).
-
 ![](README_files/figure-gfm/sc-1.png)<!-- -->
 
 ### Scales (Axis)
@@ -743,9 +726,6 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   theme(axis.text.x=element_text(hjust=c(0, 0.5, 0.5, 0.5, 1))) +
   theme(legend.position="bottom")
 ```
-
-    ## Warning: Vectorized input to `element_text()` is not officially supported.
-    ## Results may be unexpected or may change in future versions of ggplot2.
 
 ![](README_files/figure-gfm/ax2-1.png)<!-- -->
 
@@ -798,10 +778,10 @@ hrbrthemes::gg_check(gg)
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|-----:|---------:|-----:|
-| R    |       26 | 0.41 | 1924 | 0.42 |         346 | 0.39 |     1170 | 0.44 |
+| R    |       26 | 0.41 | 1924 | 0.42 |         346 | 0.38 |     1170 | 0.43 |
 | SVG  |        2 | 0.03 |  150 | 0.03 |           0 | 0.00 |        0 | 0.00 |
-| Rmd  |        2 | 0.03 |  141 | 0.03 |          99 | 0.11 |      172 | 0.06 |
-| YAML |        2 | 0.03 |   56 | 0.01 |           3 | 0.00 |        2 | 0.00 |
-| SUM  |       32 | 0.50 | 2271 | 0.50 |         448 | 0.50 |     1344 | 0.50 |
+| Rmd  |        2 | 0.03 |  142 | 0.03 |         101 | 0.11 |      174 | 0.06 |
+| YAML |        2 | 0.03 |   48 | 0.01 |           7 | 0.01 |        6 | 0.00 |
+| SUM  |       32 | 0.50 | 2264 | 0.50 |         454 | 0.50 |     1350 | 0.50 |
 
 clock Package Metrics for DGThemes

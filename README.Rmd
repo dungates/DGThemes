@@ -95,7 +95,7 @@ The following functions for gt are implemented/objects are exported:
 
 ### Installation
 
-```{r}
+```{r eval = F}
 # If this ever gets on the CRAN
 # install.packages("DGThemes")
 # devtools::install_github("dungates/DGThemes")
