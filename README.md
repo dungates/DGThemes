@@ -144,9 +144,10 @@ mtcars %>%
     head() %>%
     gt::gt() %>%
     gt::tab_header(title = "Cars n stuff", subtitle = "I don't know anything about cars") %>%
-    DGThemes::gt_theme_duncan() %>%
-    gt::as_latex()
+    DGThemes::gt_theme_duncan()
 ```
+
+![](README_files/figure-gfm/gt_example.png)
 
 ``` r
 ggplot(tophitters2001, aes(hr, so)) +
@@ -345,8 +346,8 @@ hrbrthemes::gg_check(gg)
 |:-----|---------:|-----:|-----:|-----:|------------:|-----:|---------:|-----:|
 | R    |       26 | 0.41 | 1924 | 0.42 |         346 | 0.38 |     1170 | 0.43 |
 | SVG  |        2 | 0.03 |  150 | 0.03 |           0 | 0.00 |        0 | 0.00 |
-| Rmd  |        2 | 0.03 |  143 | 0.03 |         101 | 0.11 |      174 | 0.06 |
+| Rmd  |        2 | 0.03 |  142 | 0.03 |         102 | 0.11 |      175 | 0.06 |
 | YAML |        2 | 0.03 |   48 | 0.01 |           7 | 0.01 |        6 | 0.00 |
-| SUM  |       32 | 0.50 | 2265 | 0.50 |         454 | 0.50 |     1350 | 0.50 |
+| SUM  |       32 | 0.50 | 2264 | 0.50 |         455 | 0.50 |     1351 | 0.50 |
 
 clock Package Metrics for DGThemes

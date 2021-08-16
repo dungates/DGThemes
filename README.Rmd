@@ -117,15 +117,16 @@ packageVersion("DGThemes")
 
 ### Base theme (Tisa Sans Pro)
 
-```{r gt_theme_1, message = F, warning = F, error = F}
+```{r gt_theme_1, message = F, warning = F, error = F, eval = F}
 mtcars %>%
     dplyr::arrange(dplyr::desc(mpg)) %>%
     head() %>%
     gt::gt() %>%
     gt::tab_header(title = "Cars n stuff", subtitle = "I don't know anything about cars") %>%
-    DGThemes::gt_theme_duncan() %>%
-    gt::as_latex()
+    DGThemes::gt_theme_duncan()
 ```
+
+![](README_files/figure-gfm/gt_example.png){width = 50%}
 
 ```{r at}
 ggplot(tophitters2001, aes(hr, so)) +

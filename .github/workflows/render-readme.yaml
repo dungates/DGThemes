@@ -16,7 +16,6 @@ jobs:
     # install packages needed
     - name: install required packages
       run: R -e 'install.packages(c("rmarkdown","gcookbook", "remotes"))'
-           R -e 'remotes::install_github("dungates/DGThemes")'
 
     # Render READEME.md using rmarkdown
     - name: render README
