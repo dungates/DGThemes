@@ -123,7 +123,8 @@ mtcars %>%
     head() %>%
     gt::gt() %>%
     gt::tab_header(title = "Cars n stuff", subtitle = "I don't know anything about cars") %>%
-    DGThemes::gt_theme_duncan()
+    DGThemes::gt_theme_duncan() %>%
+    gt::as_latex()
 ```
 
 ```{r at}
