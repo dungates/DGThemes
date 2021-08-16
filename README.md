@@ -121,13 +121,13 @@ mtcars %>%
     DGThemes::gt_theme_duncan()
 ```
 
-<div id="vlvvapzypw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="njlzdoeuyk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vlvvapzypw .gt_table {
+#njlzdoeuyk .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -152,7 +152,7 @@ html {
   border-left-color: black;
 }
 
-#vlvvapzypw .gt_heading {
+#njlzdoeuyk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -164,7 +164,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#vlvvapzypw .gt_title {
+#njlzdoeuyk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -174,7 +174,7 @@ html {
   border-bottom-width: 0;
 }
 
-#vlvvapzypw .gt_subtitle {
+#njlzdoeuyk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -184,13 +184,13 @@ html {
   border-top-width: 0;
 }
 
-#vlvvapzypw .gt_bottom_border {
+#njlzdoeuyk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vlvvapzypw .gt_col_headings {
+#njlzdoeuyk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 4px;
   border-top-color: black;
@@ -205,7 +205,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#vlvvapzypw .gt_col_heading {
+#njlzdoeuyk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -225,7 +225,7 @@ html {
   overflow-x: hidden;
 }
 
-#vlvvapzypw .gt_column_spanner_outer {
+#njlzdoeuyk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -237,15 +237,15 @@ html {
   padding-right: 4px;
 }
 
-#vlvvapzypw .gt_column_spanner_outer:first-child {
+#njlzdoeuyk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vlvvapzypw .gt_column_spanner_outer:last-child {
+#njlzdoeuyk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vlvvapzypw .gt_column_spanner {
+#njlzdoeuyk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -257,7 +257,7 @@ html {
   width: 100%;
 }
 
-#vlvvapzypw .gt_group_heading {
+#njlzdoeuyk .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -279,7 +279,7 @@ html {
   vertical-align: middle;
 }
 
-#vlvvapzypw .gt_empty_group_heading {
+#njlzdoeuyk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -294,15 +294,15 @@ html {
   vertical-align: middle;
 }
 
-#vlvvapzypw .gt_from_md > :first-child {
+#njlzdoeuyk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vlvvapzypw .gt_from_md > :last-child {
+#njlzdoeuyk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vlvvapzypw .gt_row {
+#njlzdoeuyk .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -321,7 +321,7 @@ html {
   overflow-x: hidden;
 }
 
-#vlvvapzypw .gt_stub {
+#njlzdoeuyk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -333,7 +333,7 @@ html {
   padding-left: 12px;
 }
 
-#vlvvapzypw .gt_summary_row {
+#njlzdoeuyk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -343,7 +343,7 @@ html {
   padding-right: 5px;
 }
 
-#vlvvapzypw .gt_first_summary_row {
+#njlzdoeuyk .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -353,7 +353,7 @@ html {
   border-top-color: #D3D3D3;
 }
 
-#vlvvapzypw .gt_grand_summary_row {
+#njlzdoeuyk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -363,7 +363,7 @@ html {
   padding-right: 5px;
 }
 
-#vlvvapzypw .gt_first_grand_summary_row {
+#njlzdoeuyk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -373,11 +373,11 @@ html {
   border-top-color: #D3D3D3;
 }
 
-#vlvvapzypw .gt_striped {
+#njlzdoeuyk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vlvvapzypw .gt_table_body {
+#njlzdoeuyk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -386,7 +386,7 @@ html {
   border-bottom-color: #D3D3D3;
 }
 
-#vlvvapzypw .gt_footnotes {
+#njlzdoeuyk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -400,13 +400,13 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#vlvvapzypw .gt_footnote {
+#njlzdoeuyk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#vlvvapzypw .gt_sourcenotes {
+#njlzdoeuyk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -420,41 +420,41 @@ html {
   border-right-color: #D3D3D3;
 }
 
-#vlvvapzypw .gt_sourcenote {
+#njlzdoeuyk .gt_sourcenote {
   font-size: 12px;
   padding: 10px;
 }
 
-#vlvvapzypw .gt_left {
+#njlzdoeuyk .gt_left {
   text-align: left;
 }
 
-#vlvvapzypw .gt_center {
+#njlzdoeuyk .gt_center {
   text-align: center;
 }
 
-#vlvvapzypw .gt_right {
+#njlzdoeuyk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vlvvapzypw .gt_font_normal {
+#njlzdoeuyk .gt_font_normal {
   font-weight: normal;
 }
 
-#vlvvapzypw .gt_font_bold {
+#njlzdoeuyk .gt_font_bold {
   font-weight: bold;
 }
 
-#vlvvapzypw .gt_font_italic {
+#njlzdoeuyk .gt_font_italic {
   font-style: italic;
 }
 
-#vlvvapzypw .gt_super {
+#njlzdoeuyk .gt_super {
   font-size: 65%;
 }
 
-#vlvvapzypw .gt_footnote_marks {
+#njlzdoeuyk .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -566,8 +566,17 @@ html {
 remotes::install_github("dungates/DGThemes")
 ```
 
-    ## Skipping install of 'DGThemes' from a github remote, the SHA1 (5b7e4e3a) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
+    ## Downloading GitHub repo dungates/DGThemes@HEAD
+
+    ## 
+    ##      checking for file ‘/private/var/folders/ld/xmm5dtcj17gf5p6yhc56t0mm0000gn/T/RtmpsYtj92/remotes1752cb7b971c/dungates-DGThemes-7c86e2f/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/ld/xmm5dtcj17gf5p6yhc56t0mm0000gn/T/RtmpsYtj92/remotes1752cb7b971c/dungates-DGThemes-7c86e2f/DESCRIPTION’
+    ##   ─  preparing ‘DGThemes’:
+    ##      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
+    ##   ─  checking for LF line-endings in source and make files and shell scripts
+    ##   ─  checking for empty or unneeded directories
+    ##   ─  building ‘DGThemes_0.8.6.tar.gz’
+    ##      
+    ## 
 
 NOTE: To use the ‘remotes’ install options you will need to have the
 [{remotes} package](https://github.com/r-lib/remotes) installed.
@@ -789,9 +798,9 @@ hrbrthemes::gg_check(gg)
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|-----:|---------:|-----:|
-| R    |       26 | 0.41 | 1923 | 0.42 |         346 | 0.39 |     1170 | 0.44 |
+| R    |       26 | 0.41 | 1924 | 0.42 |         346 | 0.39 |     1170 | 0.44 |
 | SVG  |        2 | 0.03 |  150 | 0.03 |           0 | 0.00 |        0 | 0.00 |
-| Rmd  |        2 | 0.03 |  142 | 0.03 |          99 | 0.11 |      172 | 0.06 |
+| Rmd  |        2 | 0.03 |  141 | 0.03 |          99 | 0.11 |      172 | 0.06 |
 | YAML |        2 | 0.03 |   56 | 0.01 |           3 | 0.00 |        2 | 0.00 |
 | SUM  |       32 | 0.50 | 2271 | 0.50 |         448 | 0.50 |     1344 | 0.50 |
 

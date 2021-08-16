@@ -8,6 +8,11 @@ Additional Themes and Theme Components for 'ggplot2'
 
 ----
 
+```{r setup, include = F}
+knitr::opts_chunk$set(warning = F, message = F, error = F)
+```
+
+
 This is a personal package for themes and theme components for ggplot2, gt, and other tools as I discover and use them throughout R.
 
 The core theme: `theme_premium` uses Tisa Sans Pro which will need to be installed on just about any system, and can be downloaded [here](https://fontshub.pro/font/ff-tisa-sans-pro-download) or from this [github](https://github.com/ofnlut/IronGrads/tree/master/grads/static/fonts/Tisa-typeface/Tisa%20Sans%20Pro). This font is condensed, has solid default kerning pairs and geometric numbers. That's what I consider the "font trifecta" must-have for charts. A common prerequisite for charts for fonts is that they have a diversity of weights. Tisa Sans Pro has a wealth of diversity in its weights, as well as a pristine quality to its base font.
@@ -87,16 +92,6 @@ The following functions for gt are implemented/objects are exported:
 
 - `gt_theme_duncan` - Makes a gt table with black outlines and bold title/column labels
 
-```{r gt_theme_1, message = F, warning = F, error = F}
-library(tidyverse)
-mtcars %>%
-    arrange(desc(mpg)) %>%
-    head() %>%
-    gt::gt() %>%
-    gt::tab_header(title = "Cars n stuff", subtitle = "I don't know anything about cars") %>%
-    DGThemes::gt_theme_duncan()
-```
-
 
 ### Installation
 
@@ -122,7 +117,16 @@ packageVersion("DGThemes")
 
 ### Base theme (Tisa Sans Pro)
 
-```{r an}
+```{r gt_theme_1, message = F, warning = F, error = F}
+mtcars %>%
+    dplyr::arrange(dplyr::desc(mpg)) %>%
+    head() %>%
+    gt::gt() %>%
+    gt::tab_header(title = "Cars n stuff", subtitle = "I don't know anything about cars") %>%
+    DGThemes::gt_theme_duncan()
+```
+
+```{r at}
 ggplot(tophitters2001, aes(hr, so)) +
   geom_point() +
   labs(x="Home Runs", y="Strikeouts",
