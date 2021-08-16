@@ -143,7 +143,7 @@ theme_ft_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
                                                family=caption_family, face=caption_face))
   ret <- ret + theme(plot.margin=plot_margin)
 
-  bkgrnd <- "#252a32"
+  bkgrnd <- "black"
   fgrnd <- "#617a89"
 
   ret <- ret +

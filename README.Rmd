@@ -90,10 +90,10 @@ The following functions for gt are implemented/objects are exported:
 
 ### Installation
 
-```{r eval = F}
+```{r}
 # If this ever gets on the CRAN
 # install.packages("DGThemes")
-devtools::install_github("dungates/DGThemes")
+# devtools::install_github("dungates/DGThemes")
 remotes::install_github("dungates/DGThemes")
 ```
 
@@ -111,37 +111,42 @@ packageVersion("DGThemes")
 ### Base theme (Tisa Sans Pro)
 
 ```{r an}
-ggplot(mtcars, aes(mpg, wt)) +
+ggplot(tophitters2001, aes(hr, so)) +
   geom_point() +
-  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
+  labs(x="Home Runs", y="Strikeouts",
        title="Seminal ggplot2 scatterplot example",
-       subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       subtitle="Home runs come at the cost of strikeouts",
+       caption="Data from the `tophitters2001` default set") + 
+  geom_text(aes(label = if_else(hr > 50, name, NULL)),
+            vjust = 1.2) +
   theme_premium()
 ```
 
 ### Roboto Condensed
 
 ```{r rc}
-ggplot(mtcars, aes(mpg, wt)) +
-  geom_point() +
-  geom_smooth() +
-  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
-       title="Car Efficiency vs. Weight",
-       subtitle="The more a car weighs, the less fuel efficiency it tends to have",
-       caption="Data from the `mtcars` package") + 
+ggplot(beaver1, aes(time, temp)) +
+  geom_line() +
+  labs(x="Time (hm)", y="Temperature (celsius)",
+       title="Beaver Temperature over Time",
+       subtitle="Beavers activity peaks at night, around 10 o'clock.",
+       caption="Data from the `beaver1` default set") + 
   theme_premium_rc()
 ```
 
 ### New FT Theme!
 
 ```{r ft}
-ggplot(mtcars, aes(mpg, wt)) +
-  geom_point(color = ft_cols$yellow) +
-  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
-       title="Seminal ggplot2 scatterplot example",
-       subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+Seatbelts <- as_tibble(Seatbelts)
+ggplot(Seatbelts, aes(DriversKilled, kms)) +
+  geom_point(aes(color = factor(law))) +
+  labs(x="Number of Drivers Killed", y="Distance Driven (kms)",
+       title="Always wear a seatbelt!",
+       subtitle="Deaths fall dramatically when there are laws in place that require seatbelts.",
+       color = "Seatbelt\nRequirement",
+       caption="Data from the `Seatbelts` default set") + 
+  coord_flip() +
+  scale_color_ft(labels = c("Not Mandatory", "Mandatory")) +
   theme_ft_rc()
 ```
 
