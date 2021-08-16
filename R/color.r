@@ -1,4 +1,5 @@
-premium_palette <- c("#d18975", "#8fd175", "#3f2d54", "#75b8d1", "#2d543d", "#c9d175", "#d1ab75", "#d175b8", "#758bd1")
+premium_palette <- c("#C25E5E", "#C05975", "#B9588C", "#A75DA5", "#8466B9", "#586FCA",
+                     "#1978D0", "#007FCC", "#0085C1")
 
 #' A muted, qualitative color palette
 #'

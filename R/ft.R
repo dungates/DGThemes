@@ -5,14 +5,14 @@
 #' @docType data
 #' @export
 list(
-slate = "#617a89",
-blue = "#0b53c1",
-red = "#ff0055",
+slate = "#798897",
+blue = "steelblue",
+red = "#530004",
 green = "#b3e93e",
-gray = "#909495",
-yellow = "#ffec1b",
-peach = "#fba29d",
-light_blue = "#23d0fc",
+gray = "#gray50",
+yellow = "#ffc922",
+peach = "#C25E5E",
+light_blue = "#00C4FF",
 white = "#ffffff"
 ) -> ft_cols
 

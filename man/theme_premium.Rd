@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme-premium.r
 \name{theme_premium}
 \alias{theme_premium}
-\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typography}
+\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typography, inspired by theme_ipsum}
 \usage{
 theme_premium(
   base_family = "Tisa Sans Pro",

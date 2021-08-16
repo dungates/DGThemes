@@ -13,14 +13,6 @@ test_that("we can do something", {
   gg_tmp <- ggplot2::ggplot() +
     ggplot2::labs(x="Thsi", y="This", title="This", subtitle="This", caption="Thsi")
 
-  expect_message(gg_check(gg_tmp), "misspelled")
-
-  gg_tmp <- ggplot2::ggplot() +
-    ggplot2::labs(x="Thsi", y="This", title="This", subtitle="This", caption="Thsi") %>%
-    gg_check()
-
-  invisible(gg_check(mtcars))
-
   th <- theme_premium(grid="XY", axis="xy")
   expect_that(th$plot.title$family, equals("Tisa Sans Pro"))
 
