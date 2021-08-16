@@ -56,9 +56,9 @@ test_that("we can do something", {
   expect_that(tmp_y1$expand, equals(c(0.01,0)))
   expect_that(tmp_y2$expand, equals(c(0.01,0)))
 
-  expect_that(premium_pal()(1), equals("#d18975"))
-  expect_that(col$palette(1), equals("#d18975"))
-  expect_that(fil$palette(1), equals("#d18975"))
+  expect_that(premium_pal()(1), equals("#C25E5E"))
+  expect_that(col$palette(1), equals("#C25E5E"))
+  expect_that(fil$palette(1), equals("#C25E5E"))
 
   testthat::skip_on_cran()
   invisible(import_roboto_condensed())

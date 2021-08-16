@@ -50,6 +50,7 @@ Imports:
     ggplot2 (>= 3.3.0),
     grDevices,
     grid,
+    gt,
     scales,
     extrafont,
     knitr,
