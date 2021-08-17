@@ -128,7 +128,7 @@ mtcars %>%
 ![](README_files/figure-gfm/gt_example.png){width = 50%}
 
 ```{r at}
-ggplot2::ggplot(tophitters2001, aes(hr, so)) +
+ggplot2::ggplot(tophitters2001, ggplot2::aes(hr, so)) +
   ggplot2::geom_point() +
   ggplot2::labs(
     x = "Home Runs", y = "Strikeouts",
@@ -136,7 +136,7 @@ ggplot2::ggplot(tophitters2001, aes(hr, so)) +
     subtitle = "Home runs come at the cost of strikeouts",
     caption = "Data from the `tophitters2001` default set"
   ) +
-  ggplot2::geom_text(aes(label = dplyr::if_else(hr > 50, name, NULL)),
+  ggplot2::geom_text(ggplot2::aes(label = dplyr::if_else(hr > 50, name, NULL)),
     vjust = 1.2
   ) +
   DGThemes::theme_premium()
@@ -145,7 +145,7 @@ ggplot2::ggplot(tophitters2001, aes(hr, so)) +
 ### Roboto Condensed
 
 ```{r rc}
-ggplot2::ggplot(beaver1, aes(time, temp)) +
+ggplot2::ggplot(beaver1, ggplot2::aes(time, temp)) +
   ggplot2::geom_line() +
   ggplot2::labs(
     x = "Time (hm)", y = "Temperature (celsius)",
@@ -160,8 +160,8 @@ ggplot2::ggplot(beaver1, aes(time, temp)) +
 
 ```{r ft}
 Seatbelts <- tibble::as_tibble(Seatbelts)
-ggplot2::ggplot(Seatbelts, aes(DriversKilled, kms)) +
-  ggplot2::geom_point(aes(color = factor(law))) +
+ggplot2::ggplot(Seatbelts, ggplot2::aes(DriversKilled, kms)) +
+  ggplot2::geom_point(ggplot2::aes(color = factor(law))) +
   ggplot2::labs(
     x = "Number of Drivers Killed", y = "Distance Driven (kms)",
     title = "Always wear a seatbelt!",
@@ -179,7 +179,7 @@ ggplot2::ggplot(Seatbelts, aes(DriversKilled, kms)) +
 ```{r ps, fig.width=10, fig.height=7}
 HairEyeColor <- tibble::as_tibble(HairEyeColor)
 ggplot2::ggplot(HairEyeColor) +
-  geom_boxplot(aes(x = Eye, y = n, color = Sex)) +
+  geom_boxplot(ggplot2::aes(x = Eye, y = n, color = Sex)) +
   DGThemes::scale_color_premium() +
   DGThemes::scale_fill_premium() +
   facet_wrap(~Sex) +
@@ -197,8 +197,8 @@ gg
 ### Titillium Web
 
 ```{r tw, fig.width=10, fig.height=7}
-ggplot2::ggplot(diamonds, aes(carat, price)) +
-  ggplot2::geom_jitter(aes(color = clarity, fill = clarity), size = 3, shape = 21, alpha = 1 / 2) +
+ggplot2::ggplot(diamonds, ggplot2::aes(carat, price)) +
+  ggplot2::geom_jitter(ggplot2::aes(color = clarity, fill = clarity), size = 3, shape = 21, alpha = 1 / 2) +
   ggplot2::scale_y_continuous(labels = scales::comma) +
   DGThemes::scale_color_premium() +
   DGThemes::scale_fill_premium() +
@@ -215,7 +215,7 @@ ggplot2::ggplot(diamonds, aes(carat, price)) +
 ### Scales (Color/Fill)
 
 ```{r sc}
-ggplot2::ggplot(tophitters2001, aes(hr, so, color = lg)) +
+ggplot2::ggplot(tophitters2001, ggplot2::aes(hr, so, color = lg)) +
   ggplot2::geom_point() +
   ggplot2::labs(
     x = "Home Runs", y = "Strikeouts",
@@ -223,7 +223,7 @@ ggplot2::ggplot(tophitters2001, aes(hr, so, color = lg)) +
     subtitle = "Home runs come at the cost of strikeouts",
     caption = "Data from the `tophitters2001` default set"
   ) +
-  ggplot2::geom_text(aes(label = if_else(hr > 50, name, NULL)),
+  ggplot2::geom_text(ggplot2::aes(label = if_else(hr > 50, name, NULL)),
     vjust = 1.2
   ) +
   DGThemes::scale_color_premium() +
@@ -244,9 +244,9 @@ tophitters2001 %>%
   ) %>%
   dplyr::arrange(desc(pct)) %>%
   dplyr::slice(c(1:10)) %>%
-  ggplot2::ggplot(aes(fct_reorder(name, pct), pct)) +
+  ggplot2::ggplot(ggplot2::aes(fct_reorder(name, pct), pct)) +
   ggplot2::geom_col() +
-  ggplot2::geom_text(aes(label = paste0(hr, "\n(", round(pct, 2), "%)")), vjust = -0.8, color = "black") +
+  ggplot2::geom_text(ggplot2::aes(label = paste0(hr, "\n(", round(pct, 2), "%)")), vjust = -0.8, color = "black") +
   ggplot2::scale_y_percent(scale = 1, limits = c(0, 3)) +
   ggplot2::labs(
     x = "Player", y = "Percent of home runs in season",
@@ -258,7 +258,7 @@ tophitters2001 %>%
 ```
 
 ```{r ax2, fig.height=6}
-ggplot2::ggplot(uspopage, aes(x = Year, y = Thousands, fill = AgeGroup)) +
+ggplot2::ggplot(uspopage, ggplot2::aes(x = Year, y = Thousands, fill = AgeGroup)) +
   ggplot2::geom_area() +
   DGThemes::scale_fill_premium() +
   ggplot2::scale_x_continuous(expand = c(0, 0)) +
@@ -280,9 +280,9 @@ count(mpg, class) %>%
   dplyr::mutate(n = n * 2000) %>%
   dplyr::arrange(n) %>%
   dplyr::mutate(class = factor(class, levels = class)) %>%
-  ggplot2::ggplot(aes(class, n)) +
+  ggplot2::ggplot(ggplot2::aes(class, n)) +
   ggplot2::geom_col() +
-  ggplot2::geom_text(aes(label = scales::comma(n)), hjust = 0, nudge_y = 2000) +
+  ggplot2::geom_text(ggplot2::aes(label = scales::comma(n)), hjust = 0, nudge_y = 2000) +
   ggplot2::scale_y_comma(limits = c(0, 150000)) +
   ggplot2::coord_flip() +
   ggplot2::labs(
@@ -299,7 +299,7 @@ count(mpg, class) %>%
 ```{r sp, message=TRUE}
 df <- data.frame(x = c(20, 25, 30), y = c(4, 4, 4), txt = c("One", "Two", "Three"))
 
-ggplot2::ggplot(mtcars, aes(mpg, wt)) +
+ggplot2::ggplot(mtcars, ggplot2::aes(mpg, wt)) +
   ggplot2::geom_point() +
   ggplot2::labs(
     x = "This is some txt", y = "This is more text",
