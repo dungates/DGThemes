@@ -11,10 +11,10 @@ Additional Themes and Theme Components for 'ggplot2::ggplot2'
 ```{r setup, include = F}
 knitr::opts_chunk$set(warning = F, message = F, error = F)
 # DGThemes::import_tisa_sans()
-systemfonts::register_font("Tisa Sans Pro", plain = "/Users/dunk/Library/Fonts/TisaSansPro-Regular.ttf")
-systemfonts::register_font("Open Sans", plain = "/Users/dunk/Library/Fonts/OpenSans-Regular.ttf
+systemfonts::register_font("Tisa Sans Pro", plain = "/inst/fonts/tisa-sans/TisaSansPro-Regular.ttf")
+systemfonts::register_font("Open Sans", plain = "/inst/fonts/open-sans/OpenSans-Regular.ttf
 ")
-systemfonts::register_font("Fira Sans", plain = "/Users/dunk/Library/Fonts/FiraSans-Regular.ttf")
+systemfonts::register_font("Fira Sans", plain = "/inst/fonts/fira-sans/FiraSans-Regular.ttf")
 ```
 
 
