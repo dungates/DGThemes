@@ -187,7 +187,7 @@ update_geom_font_defaults <- function(family="Open Sans", face="plain", size=3.5
 #' @rdname OpenSans
 #' @md
 #' @title Open Sans font name R variable aliases
-#' @description `font_an` == "`Open Sans`"
+#' @description `font_on` == "`Open Sans`"
 #' @format length 1 character vector
 #' @export
 font_os <- "Open Sans"
@@ -195,7 +195,7 @@ font_os <- "Open Sans"
 #' @rdname FiraSans
 #' @md
 #' @title Fira Sans font name R variable aliases
-#' @description `font_an` == "`Open Sans`"
+#' @description `font_fn` == "`Fira Sans`"
 #' @format length 1 character vector
 #' @export
 font_fs <- "Fira Sans"

@@ -186,7 +186,7 @@ update_geom_font_defaults <- function(family="Tisa Sans Pro", face="plain", size
 #' @rdname TisaSans
 #' @md
 #' @title Tisa Sans Pro font name R variable aliases
-#' @description `font_an` == "`Tisa Sans Pro`"
+#' @description `font_tsn` == "`Tisa Sans Pro`"
 #' @format length 1 character vector
 #' @export
-font_an <- "Tisa Sans Pro"
+font_tsn <- "Tisa Sans Pro"

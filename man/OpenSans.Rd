@@ -11,6 +11,6 @@ length 1 character vector
 font_os
 }
 \description{
-\code{font_an} == "\verb{Open Sans}"
+\code{font_on} == "\verb{Open Sans}"
 }
 \keyword{datasets}
