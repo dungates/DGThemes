@@ -152,9 +152,9 @@ theme_duncan <- function(base_family="Open Sans", base_size = 11.5,
                                                family=axis_title_family, face=axis_title_face))
   ret <- ret + theme(axis.title.y.right=element_text(hjust=yj, size=axis_title_size, angle=90,
                                                      family=axis_title_family, face=axis_title_face))
-  ret <- ret + theme(strip.text=element_text(hjust=0, size=strip_text_size,
+  ret <- ret + theme(strip.text=element_text(hjust=0.5, size=strip_text_size,
                                              face=strip_text_face, family=strip_text_family))
-  ret <- ret + theme(panel.spacing=grid::unit(2, "lines"))
+  ret <- ret + theme(panel.spacing=grid::unit(0.5, "lines"))
   ret <- ret + theme(plot.title=element_text(hjust=0.5, size=plot_title_size,
                                              margin=margin(b=plot_title_margin),
                                              family=plot_title_family, face=plot_title_face))
@@ -165,6 +165,8 @@ theme_duncan <- function(base_family="Open Sans", base_size = 11.5,
                                                margin=margin(t=caption_margin),
                                                family=caption_family, face=caption_face))
   ret <- ret + theme(plot.margin=plot_margin)
+
+  ret <- ret + theme(panel.spacing = unit(0, "lines"))
 
   ret
 

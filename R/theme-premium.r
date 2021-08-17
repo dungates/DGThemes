@@ -152,10 +152,10 @@ theme_premium <- function(base_family="Tisa Sans Pro", base_size = 11.5,
                                                family=axis_title_family, face=axis_title_face))
   ret <- ret + theme(axis.title.y.right=element_text(hjust=yj, size=axis_title_size, angle=90,
                                                      family=axis_title_family, face=axis_title_face))
-  ret <- ret + theme(strip.text=element_text(hjust=0, size=strip_text_size,
+  ret <- ret + theme(strip.text=element_text(hjust=0.5, size=strip_text_size,
                                              face=strip_text_face, family=strip_text_family))
   ret <- ret + theme(text = element_text(family = base_family))
-  ret <- ret + theme(panel.spacing=grid::unit(2, "lines"))
+  ret <- ret + theme(panel.spacing=grid::unit(0.5, "lines"))
   ret <- ret + theme(plot.title=element_text(hjust=0, size=plot_title_size,
                                              margin=margin(b=plot_title_margin),
                                              family=plot_title_family, face=plot_title_face))
