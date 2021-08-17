@@ -6,6 +6,8 @@ jobs:
   render:
     # The type of runner that the job will run on
     runs-on: macOS-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -16,8 +18,9 @@ jobs:
     # install packages needed
     - name: install required packages
       run: |
-        R -e 'install.packages(c("rmarkdown","gcookbook", "remotes", "ggplot2", "dplyr", "tibble", "hrbrthemes", "cloc"), repos = "http://cran.us.r-project.org")'
+        R -e 'install.packages(c("rmarkdown","gcookbook", "remotes", "ggplot2", "dplyr", "tibble", "hrbrthemes"), repos = "http://cran.us.r-project.org")'
         R -e 'remotes::install_github("dungates/DGThemes")'
+        R -e 'remotes::install_github("hrbrmstr/cloc")'
 
     # Render READEME.md using rmarkdown
     - name: render README
