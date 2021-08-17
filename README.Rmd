@@ -139,10 +139,10 @@ ggplot2::ggplot(tophitters2001, ggplot2::aes(hr, so)) +
     subtitle = "Home runs come at the cost of strikeouts",
     caption = "Data from the `tophitters2001` default set"
   ) +
-  ggplot2::geom_text(ggplot2::aes(label = dplyr::if_else(hr > 50, name, NULL)),
-    vjust = 1.2,
-    family = "Tisa Sans Pro"
-  ) +
+  # ggplot2::geom_text(ggplot2::aes(label = dplyr::if_else(hr > 50, name, NULL)),
+  #   vjust = 1.2,
+  #   family = "Tisa Sans Pro"
+  # ) +
   DGThemes::theme_premium()
 ```
 
