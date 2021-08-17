@@ -190,3 +190,32 @@ update_geom_font_defaults <- function(family="Tisa Sans Pro", face="plain", size
 #' @format length 1 character vector
 #' @export
 font_tsn <- "Tisa Sans Pro"
+
+
+#' Import Tisa Sans Pro font for use in charts
+#'
+#' Tisa Sans Pro is a trademark of Google.
+#'
+#' There is an option `DGThemes.loadfonts` which -- if set to `TRUE` -- will
+#' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
+#' devices. If you are running under Windows, the package calls the same function
+#' to register non-core fonts with the Windows graphics device.
+#'
+#' @md
+#' @note This will take care of ensuring PDF/PostScript usage. The location of the
+#'   font directory is displayed after the base import is complete. It is highly
+#'   recommended that you install them on your system the same way you would any
+#'   other font you wish to use in other programs.
+#' @export
+import_tisa_sans <- function() {
+
+  es_font_dir <- system.file("fonts", "tisa-sans", package="DGThemes")
+  #
+  # suppressWarnings(suppressMessages(extrafont::font_import(es_font_dir, prompt=FALSE)))
+  #
+  # message(
+  #   "You will likely need to install these fonts on your system as well.\n\n",
+  #   "You can find them in [", es_font_dir, "]"
+  # )
+
+}

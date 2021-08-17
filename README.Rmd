@@ -10,7 +10,9 @@ Additional Themes and Theme Components for 'ggplot2::ggplot2'
 
 ```{r setup, include = F}
 knitr::opts_chunk$set(warning = F, message = F, error = F)
-DGThemes::loadfonts()
+# DGThemes::import_tisa_sans()
+options(DGThemes.loadfonts = T)
+DGThemes::import_tisa_sans()
 ```
 
 
