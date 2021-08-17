@@ -15,8 +15,9 @@ jobs:
 
     # install packages needed
     - name: install required packages
-      run: R -e 'install.packages(c("rmarkdown","gcookbook", "remotes", "ggplot2", "dplyr", "tibble", "hrbrthemes", "cloc"))'
-      run: R -e 'remotes::install_github("dungates/DGThemes")'
+      run: |
+        R -e 'install.packages(c("rmarkdown","gcookbook", "remotes", "ggplot2", "dplyr", "tibble", "hrbrthemes", "cloc"), repos = "http://cran.us.r-project.org")'
+        R -e 'remotes::install_github("dungates/DGThemes")'
 
     # Render READEME.md using rmarkdown
     - name: render README
