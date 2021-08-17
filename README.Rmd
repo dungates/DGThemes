@@ -11,8 +11,7 @@ Additional Themes and Theme Components for 'ggplot2::ggplot2'
 ```{r setup, include = F}
 knitr::opts_chunk$set(warning = F, message = F, error = F)
 # DGThemes::import_tisa_sans()
-options(DGThemes.loadfonts = T)
-DGThemes::import_tisa_sans()
+extrafont::loadfonts()
 ```
 
 
@@ -139,10 +138,9 @@ ggplot2::ggplot(tophitters2001, ggplot2::aes(hr, so)) +
     subtitle = "Home runs come at the cost of strikeouts",
     caption = "Data from the `tophitters2001` default set"
   ) +
-  # ggplot2::geom_text(ggplot2::aes(label = dplyr::if_else(hr > 50, name, NULL)),
-  #   vjust = 1.2,
-  #   family = "Tisa Sans Pro"
-  # ) +
+  ggplot2::geom_text(ggplot2::aes(label = dplyr::if_else(hr > 50, name, NULL)),
+    vjust = 1.2
+  ) +
   DGThemes::theme_premium()
 ```
 
