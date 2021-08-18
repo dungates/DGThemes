@@ -209,7 +209,7 @@ font_tsn <- "Tisa Sans Pro"
 #' @export
 import_tisa_sans <- function() {
 
-  es_font_dir <- system.file("fonts", "tisa-sans", package="DGThemes")
+  ts_font_dir <- system.file("fonts", "tisa-sans", package="DGThemes")
   #
   # suppressWarnings(suppressMessages(extrafont::font_import(es_font_dir, prompt=FALSE)))
   #

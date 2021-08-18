@@ -1,12 +1,13 @@
 
 ## DGThemes
 
-Additional Themes and Theme Components for ‘ggplot2’
+Additional Themes and Theme Components for ‘ggplot2::ggplot2’
 
 ------------------------------------------------------------------------
 
-This is a personal package for themes and theme components for ggplot2,
-gt, and other tools as I discover and use them throughout R.
+This is a personal package for themes and theme components for
+ggplot2::ggplot2, gt, and other tools as I discover and use them
+throughout R.
 
 The core theme: `theme_premium` uses Tisa Sans Pro which will need to be
 installed on just about any system, and can be downloaded
@@ -18,7 +19,7 @@ charts. A common prerequisite for charts for fonts is that they have a
 diversity of weights. Tisa Sans Pro has a wealth of diversity in its
 weights, as well as a pristine quality to its base font.
 
-The following functions for ggplot2 are implemented/objects are
+The following functions for ggplot2::ggplot2 are implemented/objects are
 exported:
 
 Themes:
@@ -28,7 +29,7 @@ Themes:
 -   `theme_premium_gs`: Goldman Sans Condensed
 -   `theme_premium_es`: Econ Sans Condensed
 -   `theme_premium_rc`: Roboto Condensed
--   `theme_premium_ps`: IBM Plex Sans font
+-   `DGThemes::theme_premium_ps`: IBM Plex Sans font
 -   `theme_premium_pub`: Public Sans
 -   `theme_premium_tw`: Titilium Web
 -   `theme_modern_rc`: Roboto Condensed dark theme
@@ -37,12 +38,12 @@ Themes:
 
 Scales (that align with various themes):
 
--   `scale_color_premium`: Discrete color & fill scales based on the
-    premium palette
+-   `DGThemes::scale_color_premium`: Discrete color & fill scales based
+    on the premium palette
 -   `scale_colour_premium`: Discrete color & fill scales based on the
     premium palette
--   `scale_fill_premium`: Discrete color & fill scales based on the
-    premium palette
+-   `DGThemes::scale_fill_premium`: Discrete color & fill scales based
+    on the premium palette
 -   `scale_color_ft`: Discrete color & fill scales based on the FT
     palette
 -   `scale_colour_ft`: Discrete color & fill scales based on the FT
@@ -115,8 +116,8 @@ The following functions for gt are implemented/objects are exported:
 
 ``` r
 # If this ever gets on the CRAN
-# install.packages("DGThemes")
-# devtools::install_github("dungates/DGThemes")
+install.packages("DGThemes")
+devtools::install_github("dungates/DGThemes")
 remotes::install_github("dungates/DGThemes")
 ```
 
@@ -128,7 +129,7 @@ NOTE: To use the ‘remotes’ install options you will need to have the
 ``` r
 library(DGThemes)
 library(gcookbook)
-library(tidyverse)
+library(ggplot2)
 
 # current verison
 packageVersion("DGThemes")
@@ -140,25 +141,28 @@ packageVersion("DGThemes")
 
 ``` r
 mtcars %>%
-    dplyr::arrange(dplyr::desc(mpg)) %>%
-    head() %>%
-    gt::gt() %>%
-    gt::tab_header(title = "Cars n stuff", subtitle = "I don't know anything about cars") %>%
-    DGThemes::gt_theme_duncan()
+  dplyr::arrange(dplyr::desc(mpg)) %>%
+  head() %>%
+  gt::gt() %>%
+  gt::tab_header(title = "Cars n stuff", subtitle = "I don't know anything about cars") %>%
+  DGThemes::gt_theme_duncan()
 ```
 
-![](README_files/figure-gfm/gt_example.png)
+![](README_files/figure-gfm/gt_example.png){width = 50%}
 
 ``` r
-ggplot(tophitters2001, aes(hr, so)) +
-  geom_point() +
-  labs(x="Home Runs", y="Strikeouts",
-       title="Seminal ggplot2 scatterplot example",
-       subtitle="Home runs come at the cost of strikeouts",
-       caption="Data from the `tophitters2001` default set") + 
-  geom_text(aes(label = if_else(hr > 50, name, NULL)),
-            vjust = 1.2) +
-  theme_premium()
+ggplot2::ggplot(tophitters2001, ggplot2::aes(hr, so)) +
+  ggplot2::geom_point() +
+  ggplot2::labs(
+    x = "Home Runs", y = "Strikeouts",
+    title = "Seminal ggplot2::ggplot2 scatterplot example",
+    subtitle = "Home runs come at the cost of strikeouts",
+    caption = "Data from the `tophitters2001` default set"
+  ) +
+  ggplot2::geom_text(ggplot2::aes(label = dplyr::if_else(hr > 50, name, NULL)),
+    vjust = 1.2
+  ) +
+  DGThemes::theme_premium()
 ```
 
 ![](README_files/figure-gfm/at-1.png)<!-- -->
@@ -166,13 +170,15 @@ ggplot(tophitters2001, aes(hr, so)) +
 ### Roboto Condensed
 
 ``` r
-ggplot(beaver1, aes(time, temp)) +
-  geom_line() +
-  labs(x="Time (hm)", y="Temperature (celsius)",
-       title="Beaver Temperature over Time",
-       subtitle="Beavers activity peaks at night, around 10 o'clock.",
-       caption="Data from the `beaver1` default set") + 
-  theme_premium_rc()
+ggplot2::ggplot(beaver1, ggplot2::aes(time, temp)) +
+  ggplot2::geom_line() +
+  ggplot2::labs(
+    x = "Time (hm)", y = "Temperature (celsius)",
+    title = "Beaver Temperature over Time",
+    subtitle = "Beavers activity peaks at night, around 10 o'clock.",
+    caption = "Data from the `beaver1` default set"
+  ) +
+  DGThemes::theme_premium_rc()
 ```
 
 ![](README_files/figure-gfm/rc-1.png)<!-- -->
@@ -180,17 +186,19 @@ ggplot(beaver1, aes(time, temp)) +
 ### New FT Theme!
 
 ``` r
-Seatbelts <- as_tibble(Seatbelts)
-ggplot(Seatbelts, aes(DriversKilled, kms)) +
-  geom_point(aes(color = factor(law))) +
-  labs(x="Number of Drivers Killed", y="Distance Driven (kms)",
-       title="Always wear a seatbelt!",
-       subtitle="Deaths fall dramatically when there are laws in place that require seatbelts.",
-       color = "Seatbelt\nRequirement",
-       caption="Data from the `Seatbelts` default set") + 
-  coord_flip() +
-  scale_color_ft(labels = c("Not Mandatory", "Mandatory")) +
-  theme_ft_rc()
+Seatbelts <- tibble::as_tibble(Seatbelts)
+ggplot2::ggplot(Seatbelts, ggplot2::aes(DriversKilled, kms)) +
+  ggplot2::geom_point(ggplot2::aes(color = factor(law))) +
+  ggplot2::labs(
+    x = "Number of Drivers Killed", y = "Distance Driven (kms)",
+    title = "Always wear a seatbelt!",
+    subtitle = "Deaths fall dramatically when there are laws in place that require seatbelts.",
+    color = "Seatbelt\nRequirement",
+    caption = "Data from the `Seatbelts` default set"
+  ) +
+  ggplot2::coord_flip() +
+  DGThemes::scale_color_ft(labels = c("Not Mandatory", "Mandatory")) +
+  DGThemes::theme_ft_rc()
 ```
 
 ![](README_files/figure-gfm/ft-1.png)<!-- -->
@@ -198,19 +206,19 @@ ggplot(Seatbelts, aes(DriversKilled, kms)) +
 ### IBM Plex Sans
 
 ``` r
-HairEyeColor <- as_tibble(HairEyeColor)
-ggplot(HairEyeColor) +
-  geom_boxplot(aes(x = Eye, y = n, color = Sex)) +
-  scale_color_premium() +
-  scale_fill_premium() +
-  facet_wrap(~Sex) +
-  labs(
-    title="Eye Color in Males & Females",
-    subtitle="The distribution of eye color appears to be the exact same between males and females",
-    caption="Source: DGThemes & `HairEyeColor` default set"
+HairEyeColor <- tibble::as_tibble(HairEyeColor)
+ggplot2::ggplot(HairEyeColor) +
+  ggplot2::geom_boxplot(ggplot2::aes(x = Eye, y = n, color = Sex)) +
+  DGThemes::scale_color_premium() +
+  DGThemes::scale_fill_premium() +
+  ggplot2::facet_wrap(~Sex) +
+  ggplot2::labs(
+    title = "Eye Color in Males & Females",
+    subtitle = "The distribution of eye color appears to be the exact same between males and females",
+    caption = "Source: DGThemes & `HairEyeColor` default set"
   ) +
-  theme_premium_ps(grid="XY", axis="xy") +
-  theme(legend.position="bottom") -> gg
+  DGThemes::theme_premium_ps(grid = "XY", axis = "xy") +
+  ggplot2::theme(legend.position = "bottom") -> gg
 
 gg
 ```
@@ -220,19 +228,19 @@ gg
 ### Titillium Web
 
 ``` r
-ggplot(diamonds, aes(carat, price)) +
-  geom_jitter(aes(color=clarity, fill=clarity), size=3, shape=21, alpha=1/2) +
-  scale_y_continuous(labels = scales::comma) +
-  scale_color_premium() +
-  scale_fill_premium() +
-  facet_wrap(~clarity) +
-  labs(
-    title="Titillium Web",
-    subtitle="This is a subtitle to see the how it looks in Titillium Web",
-    caption="Source: DGThemes & `Diamonds` default set"
+ggplot2::ggplot(diamonds, ggplot2::aes(carat, price)) +
+  ggplot2::geom_jitter(ggplot2::aes(color = clarity, fill = clarity), size = 3, shape = 21, alpha = 1 / 2) +
+  ggplot2::scale_y_continuous(labels = scales::comma) +
+  DGThemes::scale_color_premium() +
+  DGThemes::scale_fill_premium() +
+  ggplot2::facet_wrap(~clarity) +
+  ggplot2::labs(
+    title = "Titillium Web",
+    subtitle = "This is a subtitle to see the how it looks in Titillium Web",
+    caption = "Source: DGThemes & `Diamonds` default set"
   ) +
-  theme_premium_tw(grid="XY", axis="xy") +
-  theme(legend.position="bottom")
+  DGThemes::theme_premium_tw(grid = "XY", axis = "xy") +
+  ggplot2::theme(legend.position = "bottom")
 ```
 
 ![](README_files/figure-gfm/tw-1.png)<!-- -->
@@ -240,17 +248,20 @@ ggplot(diamonds, aes(carat, price)) +
 ### Scales (Color/Fill)
 
 ``` r
-ggplot(tophitters2001, aes(hr, so, color = lg)) +
-  geom_point() +
-  labs(x="Home Runs", y="Strikeouts",
-       title="Seminal ggplot2 scatterplot example",
-       subtitle="Home runs come at the cost of strikeouts",
-       caption="Data from the `tophitters2001` default set") + 
-  geom_text(aes(label = if_else(hr > 50, name, NULL)),
-            vjust = 1.2) +
-  scale_color_premium() +
-  theme_premium() +
-  theme(legend.position = "top")
+ggplot2::ggplot(tophitters2001, ggplot2::aes(hr, so, color = lg)) +
+  ggplot2::geom_point() +
+  ggplot2::labs(
+    x = "Home Runs", y = "Strikeouts",
+    title = "Seminal ggplot2::ggplot2 scatterplot example",
+    subtitle = "Home runs come at the cost of strikeouts",
+    caption = "Data from the `tophitters2001` default set"
+  ) +
+  ggplot2::geom_text(ggplot2::aes(label = dplyr::if_else(hr > 50, name, NULL)),
+    vjust = 1.2
+  ) +
+  DGThemes::scale_color_premium() +
+  DGThemes::theme_premium() +
+  ggplot2::theme(legend.position = "top")
 ```
 
 ![](README_files/figure-gfm/sc-1.png)<!-- -->
@@ -259,75 +270,85 @@ ggplot(tophitters2001, aes(hr, so, color = lg)) +
 
 ``` r
 tophitters2001 %>%
-  mutate(count = sum(hr)) %>%
+  dplyr::mutate(count = sum(hr)) %>%
   dplyr::select(name, hr, count) %>%
-  dplyr::summarise(pct = 100*hr/sum(hr),
-                   name = name,
-                   hr = hr) %>%
+  dplyr::summarise(
+    pct = 100 * hr / sum(hr),
+    name = name,
+    hr = hr
+  ) %>%
   dplyr::arrange(desc(pct)) %>%
-  slice(c(1:10)) %>%
-  ggplot(aes(fct_reorder(name, pct), pct)) +
-  geom_col() +
-  geom_text(aes(label = paste0(hr,"\n(",round(pct, 2),"%)")), vjust = -0.8, color = "black") +
-  scale_y_percent(scale = 1, limits = c(0, 3)) +
-  labs(x="Player", y="Percent of home runs in season",
-       title="Barry Bonds ",
-       subtitle="And here's another hit, Barry Bonds",
-       caption="Data from the `mtcars` default set") + 
-  theme_premium(grid="Y")
+  dplyr::slice(c(1:10)) %>%
+  ggplot2::ggplot(ggplot2::aes(forcats::fct_reorder(name, pct), pct)) +
+  ggplot2::geom_col() +
+  ggplot2::geom_text(ggplot2::aes(label = paste0(hr, "\n(", round(pct, 2), "%)")), vjust = -0.8, color = "black") +
+  DGThemes::scale_y_percent(scale = 1, limits = c(0, 3)) +
+  ggplot2::labs(
+    x = "Player", y = "Percent of home runs in season",
+    title = "Barry Bonds ",
+    subtitle = "And here's another hit, Barry Bonds",
+    caption = "Data from the `mtcars` default set"
+  ) +
+  DGThemes::theme_premium(grid = "Y")
 ```
 
 ![](README_files/figure-gfm/ax1-1.png)<!-- -->
 
 ``` r
-ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
-  geom_area() +
-  scale_fill_premium() +
-  scale_x_continuous(expand=c(0,0)) +
-  scale_y_comma() +
-  labs(title="Age distribution of population in the U.S., 1900-2002",
-       subtitle="Example data from the R Graphics Cookbook",
-       caption="Source: R Graphics Cookbook") +
-  theme_premium_rc(grid="XY") +
-  theme(axis.text.x=element_text(hjust=c(0, 0.5, 0.5, 0.5, 1))) +
-  theme(legend.position="bottom")
+ggplot2::ggplot(uspopage, ggplot2::aes(x = Year, y = Thousands, fill = AgeGroup)) +
+  ggplot2::geom_area() +
+  DGThemes::scale_fill_premium() +
+  ggplot2::scale_x_continuous(expand = c(0, 0)) +
+  DGThemes::scale_y_comma() +
+  ggplot2::labs(
+    title = "Age distribution of population in the U.S., 1900-2002",
+    subtitle = "Example data from the R Graphics Cookbook",
+    caption = "Source: R Graphics Cookbook"
+  ) +
+  DGThemes::theme_premium_rc(grid = "XY") +
+  ggplot2::theme(axis.text.x = element_text(hjust = c(0, 0.5, 0.5, 0.5, 1))) +
+  ggplot2::theme(legend.position = "bottom")
 ```
 
 ![](README_files/figure-gfm/ax2-1.png)<!-- -->
 
 ``` r
-update_geom_font_defaults(font_rc_light)
+DGThemes::update_geom_font_defaults(font_rc_light)
 
-count(mpg, class) %>% 
-  mutate(n=n*2000) %>% 
-  arrange(n) %>% 
-  mutate(class=factor(class, levels=class)) %>% 
-  ggplot(aes(class, n)) +
-  geom_col() +
-  geom_text(aes(label=scales::comma(n)), hjust=0, nudge_y=2000) +
-  scale_y_comma(limits=c(0,150000)) +
-  coord_flip() +
-  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
-       title="Seminal ggplot2 column chart example with commas",
-       subtitle="A plot that is only useful for demonstration purposes, esp since you'd never\nreally want direct labels and axis labels",
-       caption="Brought to you by the letter 'g'") + 
-  theme_premium_rc(grid="X")
+dplyr::count(mpg, class) %>%
+  dplyr::mutate(n = n * 2000) %>%
+  dplyr::arrange(n) %>%
+  dplyr::mutate(class = factor(class, levels = class)) %>%
+  ggplot2::ggplot(ggplot2::aes(class, n)) +
+  ggplot2::geom_col() +
+  ggplot2::geom_text(ggplot2::aes(label = scales::comma(n)), hjust = 0, nudge_y = 2000) +
+  DGThemes::scale_y_comma(limits = c(0, 150000)) +
+  ggplot2::coord_flip() +
+  ggplot2::labs(
+    x = "Fuel efficiency (mpg)", y = "Weight (tons)",
+    title = "Seminal ggplot2::ggplot2 column chart example with commas",
+    subtitle = "A plot that is only useful for demonstration purposes, esp since you'd never\nreally want direct labels and axis labels",
+    caption = "Brought to you by the letter 'g'"
+  ) +
+  DGThemes::theme_premium_rc(grid = "X")
 ```
 
 ![](README_files/figure-gfm/ax3-1.png)<!-- -->
 
-### Spellcheck ggplot2 labels from `hrbrthemes`
+### Spellcheck ggplot2::ggplot2 labels from `hrbrthemes`
 
 ``` r
-df <- data.frame(x=c(20, 25, 30), y=c(4, 4, 4), txt=c("One", "Two", "Three"))
+df <- data.frame(x = c(20, 25, 30), y = c(4, 4, 4), txt = c("One", "Two", "Three"))
 
-ggplot(mtcars, aes(mpg, wt)) +
-  geom_point() +
-  labs(x="This is some txt", y="This is more text",
-       title="Thisy is a titlle",
-       subtitle="This is a subtitley",
-       caption="This is a captien") +
-  theme_premium_rc(grid="XY") -> gg
+ggplot2::ggplot(mtcars, ggplot2::aes(mpg, wt)) +
+  ggplot2::geom_point() +
+  ggplot2::labs(
+    x = "This is some txt", y = "This is more text",
+    title = "Thisy is a titlle",
+    subtitle = "This is a subtitley",
+    caption = "This is a captien"
+  ) +
+  DGThemes::theme_premium_rc(grid = "XY") -> gg
 
 hrbrthemes::gg_check(gg)
 ```
@@ -344,10 +365,10 @@ hrbrthemes::gg_check(gg)
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|-----:|---------:|-----:|
-| R    |       26 | 0.41 | 1924 | 0.42 |         346 | 0.38 |     1170 | 0.43 |
+| R    |       26 | 0.41 | 1928 | 0.42 |         351 | 0.38 |     1192 | 0.43 |
+| Rmd  |        2 | 0.03 |  164 | 0.04 |         102 | 0.11 |      173 | 0.06 |
 | SVG  |        2 | 0.03 |  150 | 0.03 |           0 | 0.00 |        0 | 0.00 |
-| Rmd  |        2 | 0.03 |  142 | 0.03 |         102 | 0.11 |      175 | 0.06 |
-| YAML |        2 | 0.03 |   48 | 0.01 |           7 | 0.01 |        6 | 0.00 |
-| SUM  |       32 | 0.50 | 2264 | 0.50 |         455 | 0.50 |     1351 | 0.50 |
+| YAML |        2 | 0.03 |   52 | 0.01 |           7 | 0.01 |        6 | 0.00 |
+| SUM  |       32 | 0.50 | 2294 | 0.50 |         460 | 0.50 |     1371 | 0.50 |
 
 clock Package Metrics for DGThemes
