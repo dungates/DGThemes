@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Fira Sans";
-}
-
-*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6){
-  font-family: "Open Sans";
 }
 
 /*
@@ -132,6 +129,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
+  font-family: "Open Sans";
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;

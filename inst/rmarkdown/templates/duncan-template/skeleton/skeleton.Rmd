@@ -15,9 +15,10 @@ output: DGThemes::skeleton
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = F, warning = F)
 library(tidyverse)
 library(DGThemes)
+theme_set(theme_duncan())
 ```
 
 ## Introduction
