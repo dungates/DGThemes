@@ -10,7 +10,7 @@
 #' That's what I consider the "font trifecta" must-have for charts. A common
 #' prerequisite for charts for fonts is that they have a diversity of weights. Tisa Sans
 #' Pro has a wealth of diversity in its weights, as well as a pristine quality to its base
-#' font.
+#' font. The other custom theme `theme_duncan` is a personal theme that is continuing to undergo development.
 #'
 #' There is an option `DGThemes.loadfonts` which -- if set to `TRUE` -- will
 #' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript

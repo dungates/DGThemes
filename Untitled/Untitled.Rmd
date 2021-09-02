@@ -1,0 +1,37 @@
+---
+title: "Data and Stuff"
+author: "Duncan Gates"
+navlink: "[NAVTITLE](http://NAVLINK/)"
+og:
+  type: "article"
+  title: "opengraph title"
+  url: "optional opengraph url"
+  image: "optional opengraph image link"
+footer:
+  - content: '[link1](http://example.com/) • [link2](http://example.com/)<br/>'
+  - content: 'Copyright © Duncan Gates, 2021'
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: DGThemes::skeleton
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(DGThemes)
+```
+
+## Introduction
+
+Some random text.
+
+```{r}
+
+```
+
+
+## Analysis
+
+```{r}
+
+```
+
