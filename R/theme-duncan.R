@@ -168,7 +168,7 @@ theme_duncan <- function(base_family="Open Sans", base_size = 11.5,
 
   ret <- ret + theme(panel.spacing = unit(0, "lines"))
 
-  ret <- ret + ggplot2::guide(color = ggplot2::guide_colorbar(title.position = "top", title.hjust = 0.5,
+  ret <- ret + ggplot2::guides(color = ggplot2::guide_colorbar(title.position = "top", title.hjust = 0.5,
                                                               barwidth = unit(20, "lines"), barheight = unit(0.5, "lines")))
 
   ret
