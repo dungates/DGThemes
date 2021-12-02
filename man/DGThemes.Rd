@@ -10,7 +10,19 @@ A compilation of extra themes and theme components for 'ggplot2' with an
 emphasis on typography.
 }
 \details{
+The core theme: \code{theme_premium} uses Tisa Sans Pro which will need to be installed
+on just about any system, and can be downloaded \href{https://fontshub.pro/font/ff-tisa-sans-pro-download}{here}
+or from this \href{https://github.com/ofnlut/IronGrads/tree/master/grads/static/fonts/Tisa-typeface/Tisa\%20Sans\%20Pro}{github}.
+This font is condensed, has solid default kerning pairs and geometric numbers.
+That's what I consider the "font trifecta" must-have for charts. A common
+prerequisite for charts for fonts is that they have a diversity of weights. Tisa Sans
+Pro has a wealth of diversity in its weights, as well as a pristine quality to its base
+font. The other custom theme \code{theme_duncan} is a personal theme that is continuing to undergo development.
 
+There is an option \code{DGThemes.loadfonts} which -- if set to \code{TRUE} -- will
+call \code{extrafont::loadfonts()} to register non-core fonts with R PDF & PostScript
+devices. If you are running under Windows, the package calls the same function
+to register non-core fonts with the Windows graphics device.
 }
 \seealso{
 Useful links:

@@ -2,7 +2,17 @@
 % Please edit documentation in R/theme-duncan.R, R/theme-premium.r
 \name{update_geom_font_defaults}
 \alias{update_geom_font_defaults}
-\title{Update matching font defaults for text geoms}
+\title{ggplot(mtcars, aes(mpg, wt, color = cyl)) +
+  geom_point() +
+  labs(
+    x = "Fuel efficiency (mpg)", y = "Weight (tons)",
+    title = "Seminal ggplot2 scatterplot example",
+    subtitle = "A plot that is only useful for demonstration purposes",
+    caption = "Brought to you by the letter 'g'"
+  ) +
+  pretty_bar() +
+  theme_duncan()
+Update matching font defaults for text geoms}
 \usage{
 update_geom_font_defaults(
   family = "Tisa Sans Pro",
