@@ -59,6 +59,7 @@ Imports:
     tools,
     magrittr,
     gdtools,
-    markdown
+    markdown,
+    sf
 RoxygenNote: 7.1.2
 VignetteBuilder: knitr
