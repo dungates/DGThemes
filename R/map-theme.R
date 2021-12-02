@@ -5,7 +5,9 @@
 #' @param bg background color
 #'
 #' @examples
-#' nc <- st_read(system.file("shape/nc.shp", package="sf"))
+#' library(sf)
+#' library(ggplot2)
+#' nc <- sf::read_sf(system.file("shape/nc.shp", package="sf"))
 #' ggplot(nc) +
 #'    geom_sf() +
 #'    theme_map()

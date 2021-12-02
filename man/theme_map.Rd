@@ -17,7 +17,9 @@ theme_map(base_family = "Fira Sans", base_size = 15, bg = "gray15")
 theme for making maps
 }
 \examples{
-nc <- st_read(system.file("shape/nc.shp", package="sf"))
+library(sf)
+library(ggplot2)
+nc <- sf::read_sf(system.file("shape/nc.shp", package="sf"))
 ggplot(nc) +
    geom_sf() +
    theme_map()
